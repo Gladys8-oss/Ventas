@@ -19,7 +19,7 @@ namespace Ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("HolaMundo");
+            MessageBox.Show("La edad no es barrera. Es una limitación que pones en tu mente - Jackie Joyner-Kersee");
         }
     }
 }
