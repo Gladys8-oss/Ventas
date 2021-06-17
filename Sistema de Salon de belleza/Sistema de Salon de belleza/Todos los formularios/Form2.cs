@@ -40,7 +40,7 @@ namespace Sistema_de_Salon_de_belleza
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var form3 = new Todos_los_formularios.Productos();
+            var form3 = new Todos_los_formularios.FormProductos();
             form3.ShowDialog();
         }
 

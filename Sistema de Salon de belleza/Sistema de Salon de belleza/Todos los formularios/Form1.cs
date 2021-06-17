@@ -1,4 +1,4 @@
-﻿using SeguridadBL;
+﻿using BL.Rentas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
