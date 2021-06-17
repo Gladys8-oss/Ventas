@@ -137,6 +137,12 @@
   <ItemGroup>
     <None Include="icon\fondo-poligono-geometrico-papel-pintado-diamantes-patron-elegante-color-suave_206846-996.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SeguridadBL\BL.Rentas.csproj">
+      <Project>{ea28fa95-27a9-46df-b8af-943cc769683e}</Project>
+      <Name>BL.Rentas</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
