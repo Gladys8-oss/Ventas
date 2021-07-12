@@ -26,12 +26,104 @@ namespace Sistema_de_Salon_de_belleza.Todos_los_formularios
 
         private void Productos_Load(object sender, EventArgs e)
         {
+            DeshabilitarHabilitarHabilitarBotones(true);
 
         }
 
         private void productoBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void seguridadBlBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            var producto = (Producto) ListaProductosBindingSource.Current;
+
+            var resultado = _productos.GuardarProducto(producto);
+            if (resultado.Exitoso == true)
+            {
+                ListaProductosBindingSource.ResetBindings(false);
+                DeshabilitarHabilitarHabilitarBotones(true);
+            }
+            else
+            {
+                MessageBox.Show(resultado.Mensaje);
+            }
+          //  MessageBox.Show(producto);
+        }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            _productos.AgrearProducto();
+            ListaProductosBindingSource.MoveLast();
+
+            DeshabilitarHabilitarHabilitarBotones(false);
+        }
+
+        private void DeshabilitarHabilitarHabilitarBotones(bool valor)
+        {
+            bindingNavigatorMoveFirstItem.Enabled = valor;
+            bindingNavigatorMoveLastItem.Enabled = valor;
+            bindingNavigatorMovePreviousItem.Enabled = valor;
+            bindingNavigatorMoveNextItem.Enabled = valor;
+            bindingNavigatorPositionItem.Enabled = valor;
+
+            bindingNavigatorAddNewItem.Enabled = valor;
+            bindingNavigatorDeleteItem.Enabled = valor;
+            toolStripButtonCancelar.Visible = !valor;
+
+        }
+         
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            
+            if (idTextBox.Text != "")
+            {
+                var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
+                if (resultado == DialogResult.Yes)
+                {
+                    var id = Convert.ToInt32(idTextBox.Text);
+                    Eliminar(id);
+                }
+                
+            }
+       }
+
+        private void Eliminar(int id)
+        {
+            var resultado = _productos.EliminarProducto(id);
+
+            if (resultado == true)
+            {
+                ListaProductosBindingSource.ResetBindings(false);
+            }
+            else
+            {
+                MessageBox.Show("Ocurrio un erro al eliminar el producto");
+            }
+        }
+
+        private void seguridadBlBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+            //DeshabilitarHabilitarHabilitarBotones(true);
+
+        }
+
+        private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+        {
+            DeshabilitarHabilitarHabilitarBotones(true);
+            Eliminar(0);
+
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

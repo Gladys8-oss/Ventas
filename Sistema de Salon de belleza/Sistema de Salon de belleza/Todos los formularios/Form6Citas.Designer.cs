@@ -35,12 +35,11 @@
             System.Windows.Forms.Label fecha_CitaLabel;
             System.Windows.Forms.Label horaLabel;
             System.Windows.Forms.Label servicioLabel;
+            System.Windows.Forms.Label idCitaLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6Citas));
             this.listaCitasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaCitasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -49,7 +48,10 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.listaCitasBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.listaCitasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +65,14 @@
             this.fecha_CitaTextBox = new System.Windows.Forms.TextBox();
             this.horaTextBox = new System.Windows.Forms.TextBox();
             this.servicioTextBox = new System.Windows.Forms.TextBox();
+            this.idCitaTextBox = new System.Windows.Forms.TextBox();
             clienteLabel = new System.Windows.Forms.Label();
             empleadoLabel = new System.Windows.Forms.Label();
             estatusLabel = new System.Windows.Forms.Label();
             fecha_CitaLabel = new System.Windows.Forms.Label();
             horaLabel = new System.Windows.Forms.Label();
             servicioLabel = new System.Windows.Forms.Label();
+            idCitaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.listaCitasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCitasBindingNavigator)).BeginInit();
             this.listaCitasBindingNavigator.SuspendLayout();
@@ -78,6 +82,7 @@
             // clienteLabel
             // 
             clienteLabel.AutoSize = true;
+            clienteLabel.BackColor = System.Drawing.Color.Transparent;
             clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             clienteLabel.Location = new System.Drawing.Point(9, 92);
             clienteLabel.Name = "clienteLabel";
@@ -88,6 +93,7 @@
             // empleadoLabel
             // 
             empleadoLabel.AutoSize = true;
+            empleadoLabel.BackColor = System.Drawing.Color.Transparent;
             empleadoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             empleadoLabel.Location = new System.Drawing.Point(9, 118);
             empleadoLabel.Name = "empleadoLabel";
@@ -98,6 +104,7 @@
             // estatusLabel
             // 
             estatusLabel.AutoSize = true;
+            estatusLabel.BackColor = System.Drawing.Color.Transparent;
             estatusLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             estatusLabel.Location = new System.Drawing.Point(9, 144);
             estatusLabel.Name = "estatusLabel";
@@ -108,6 +115,7 @@
             // fecha_CitaLabel
             // 
             fecha_CitaLabel.AutoSize = true;
+            fecha_CitaLabel.BackColor = System.Drawing.Color.Transparent;
             fecha_CitaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fecha_CitaLabel.Location = new System.Drawing.Point(9, 170);
             fecha_CitaLabel.Name = "fecha_CitaLabel";
@@ -118,6 +126,7 @@
             // horaLabel
             // 
             horaLabel.AutoSize = true;
+            horaLabel.BackColor = System.Drawing.Color.Transparent;
             horaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             horaLabel.Location = new System.Drawing.Point(9, 196);
             horaLabel.Name = "horaLabel";
@@ -128,6 +137,7 @@
             // servicioLabel
             // 
             servicioLabel.AutoSize = true;
+            servicioLabel.BackColor = System.Drawing.Color.Transparent;
             servicioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             servicioLabel.Location = new System.Drawing.Point(9, 222);
             servicioLabel.Name = "servicioLabel";
@@ -135,16 +145,25 @@
             servicioLabel.TabIndex = 12;
             servicioLabel.Text = "Servicio:";
             // 
+            // idCitaLabel
+            // 
+            idCitaLabel.AutoSize = true;
+            idCitaLabel.Location = new System.Drawing.Point(17, 260);
+            idCitaLabel.Name = "idCitaLabel";
+            idCitaLabel.Size = new System.Drawing.Size(40, 13);
+            idCitaLabel.TabIndex = 14;
+            idCitaLabel.Text = "Id Cita:";
+            // 
             // listaCitasBindingSource
             // 
             this.listaCitasBindingSource.DataSource = typeof(BL.Rentas.CitasBL.Citas);
             // 
             // listaCitasBindingNavigator
             // 
-            this.listaCitasBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.listaCitasBindingNavigator.AddNewItem = null;
             this.listaCitasBindingNavigator.BindingSource = this.listaCitasBindingSource;
             this.listaCitasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.listaCitasBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.listaCitasBindingNavigator.DeleteItem = null;
             this.listaCitasBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -157,7 +176,8 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.listaCitasBindingNavigatorSaveItem});
+            this.listaCitasBindingNavigatorSaveItem,
+            this.toolStripButtonCancelar});
             this.listaCitasBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.listaCitasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.listaCitasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -165,18 +185,9 @@
             this.listaCitasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaCitasBindingNavigator.Name = "listaCitasBindingNavigator";
             this.listaCitasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaCitasBindingNavigator.Size = new System.Drawing.Size(839, 25);
+            this.listaCitasBindingNavigator.Size = new System.Drawing.Size(859, 25);
             this.listaCitasBindingNavigator.TabIndex = 0;
             this.listaCitasBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
             // 
             // bindingNavigatorCountItem
             // 
@@ -184,15 +195,6 @@
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -254,14 +256,45 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+            // 
             // listaCitasBindingNavigatorSaveItem
             // 
             this.listaCitasBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.listaCitasBindingNavigatorSaveItem.Enabled = false;
             this.listaCitasBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listaCitasBindingNavigatorSaveItem.Image")));
             this.listaCitasBindingNavigatorSaveItem.Name = "listaCitasBindingNavigatorSaveItem";
             this.listaCitasBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.listaCitasBindingNavigatorSaveItem.Text = "Guardar datos";
+            this.listaCitasBindingNavigatorSaveItem.Click += new System.EventHandler(this.listaCitasBindingNavigatorSaveItem_Click);
+            // 
+            // toolStripButtonCancelar
+            // 
+            this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButtonCancelar.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonCancelar.Image")));
+            this.toolStripButtonCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonCancelar.Name = "toolStripButtonCancelar";
+            this.toolStripButtonCancelar.Size = new System.Drawing.Size(57, 22);
+            this.toolStripButtonCancelar.Text = "Cancelar";
+            this.toolStripButtonCancelar.Visible = false;
+            this.toolStripButtonCancelar.Click += new System.EventHandler(this.toolStripButtonCancelar_Click);
             // 
             // listaCitasDataGridView
             // 
@@ -370,12 +403,22 @@
             this.servicioTextBox.Size = new System.Drawing.Size(100, 26);
             this.servicioTextBox.TabIndex = 13;
             // 
+            // idCitaTextBox
+            // 
+            this.idCitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "IdCita", true));
+            this.idCitaTextBox.Location = new System.Drawing.Point(63, 257);
+            this.idCitaTextBox.Name = "idCitaTextBox";
+            this.idCitaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idCitaTextBox.TabIndex = 15;
+            // 
             // Form6Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(839, 457);
+            this.ClientSize = new System.Drawing.Size(859, 457);
+            this.Controls.Add(idCitaLabel);
+            this.Controls.Add(this.idCitaTextBox);
             this.Controls.Add(clienteLabel);
             this.Controls.Add(this.clienteTextBox);
             this.Controls.Add(empleadoLabel);
@@ -433,5 +476,7 @@
         private System.Windows.Forms.TextBox fecha_CitaTextBox;
         private System.Windows.Forms.TextBox horaTextBox;
         private System.Windows.Forms.TextBox servicioTextBox;
+        private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
+        private System.Windows.Forms.TextBox idCitaTextBox;
     }
 }
