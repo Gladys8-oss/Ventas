@@ -50,17 +50,11 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.clientesBLBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.clientesBLBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.listaClientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaClientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.activoCheckBox = new System.Windows.Forms.CheckBox();
-            this.apellidoTextBox = new System.Windows.Forms.TextBox();
-            this.correoTextBox = new System.Windows.Forms.TextBox();
-            this.direccionTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.telefonoTextBox = new System.Windows.Forms.TextBox();
-            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,7 +62,13 @@
             this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.clientesBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.activoCheckBox = new System.Windows.Forms.CheckBox();
+            this.apellidoTextBox = new System.Windows.Forms.TextBox();
+            this.correoTextBox = new System.Windows.Forms.TextBox();
+            this.direccionTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             activoLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
@@ -79,10 +79,10 @@
             telefonoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingNavigator)).BeginInit();
             this.clientesBLBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,7 +90,7 @@
             // 
             activoLabel.AutoSize = true;
             activoLabel.BackColor = System.Drawing.Color.Transparent;
-            activoLabel.Location = new System.Drawing.Point(25, 122);
+            activoLabel.Location = new System.Drawing.Point(11, 307);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(39, 13);
             activoLabel.TabIndex = 29;
@@ -100,7 +100,7 @@
             // 
             apellidoLabel.AutoSize = true;
             apellidoLabel.BackColor = System.Drawing.Color.Transparent;
-            apellidoLabel.Location = new System.Drawing.Point(25, 150);
+            apellidoLabel.Location = new System.Drawing.Point(11, 177);
             apellidoLabel.Name = "apellidoLabel";
             apellidoLabel.Size = new System.Drawing.Size(47, 13);
             apellidoLabel.TabIndex = 31;
@@ -110,7 +110,7 @@
             // 
             correoLabel.AutoSize = true;
             correoLabel.BackColor = System.Drawing.Color.Transparent;
-            correoLabel.Location = new System.Drawing.Point(25, 182);
+            correoLabel.Location = new System.Drawing.Point(11, 208);
             correoLabel.Name = "correoLabel";
             correoLabel.Size = new System.Drawing.Size(41, 13);
             correoLabel.TabIndex = 35;
@@ -120,7 +120,7 @@
             // 
             direccionLabel.AutoSize = true;
             direccionLabel.BackColor = System.Drawing.Color.Transparent;
-            direccionLabel.Location = new System.Drawing.Point(25, 208);
+            direccionLabel.Location = new System.Drawing.Point(11, 239);
             direccionLabel.Name = "direccionLabel";
             direccionLabel.Size = new System.Drawing.Size(55, 13);
             direccionLabel.TabIndex = 37;
@@ -130,7 +130,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.BackColor = System.Drawing.Color.Transparent;
-            idLabel.Location = new System.Drawing.Point(25, 234);
+            idLabel.Location = new System.Drawing.Point(11, 108);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 39;
@@ -140,7 +140,7 @@
             // 
             nombreLabel.AutoSize = true;
             nombreLabel.BackColor = System.Drawing.Color.Transparent;
-            nombreLabel.Location = new System.Drawing.Point(25, 260);
+            nombreLabel.Location = new System.Drawing.Point(11, 145);
             nombreLabel.Name = "nombreLabel";
             nombreLabel.Size = new System.Drawing.Size(47, 13);
             nombreLabel.TabIndex = 41;
@@ -150,7 +150,7 @@
             // 
             telefonoLabel.AutoSize = true;
             telefonoLabel.BackColor = System.Drawing.Color.Transparent;
-            telefonoLabel.Location = new System.Drawing.Point(25, 286);
+            telefonoLabel.Location = new System.Drawing.Point(11, 270);
             telefonoLabel.Name = "telefonoLabel";
             telefonoLabel.Size = new System.Drawing.Size(52, 13);
             telefonoLabel.TabIndex = 43;
@@ -284,6 +284,10 @@
             this.clientesBLBindingNavigator.TabIndex = 0;
             this.clientesBLBindingNavigator.Text = "bindingNavigator1";
             // 
+            // listaClientesBindingSource
+            // 
+            this.listaClientesBindingSource.DataSource = typeof(BL.Rentas.Cliente);
+            // 
             // toolStripButtonCancelar
             // 
             this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -299,6 +303,10 @@
             // 
             this.listaClientesBindingSource1.DataMember = "ListaClientes";
             this.listaClientesBindingSource1.DataSource = this.clientesBLBindingSource;
+            // 
+            // clientesBLBindingSource
+            // 
+            this.clientesBLBindingSource.DataSource = typeof(BL.Rentas.ClientesBL);
             // 
             // listaClientesDataGridView
             // 
@@ -317,69 +325,6 @@
             this.listaClientesDataGridView.Name = "listaClientesDataGridView";
             this.listaClientesDataGridView.Size = new System.Drawing.Size(642, 431);
             this.listaClientesDataGridView.TabIndex = 29;
-            // 
-            // activoCheckBox
-            // 
-            this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaClientesBindingSource, "activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(86, 117);
-            this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.activoCheckBox.TabIndex = 30;
-            this.activoCheckBox.Text = "checkBox1";
-            this.activoCheckBox.UseVisualStyleBackColor = false;
-            // 
-            // apellidoTextBox
-            // 
-            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(86, 147);
-            this.apellidoTextBox.Name = "apellidoTextBox";
-            this.apellidoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.apellidoTextBox.TabIndex = 32;
-            // 
-            // correoTextBox
-            // 
-            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(86, 179);
-            this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.correoTextBox.TabIndex = 36;
-            // 
-            // direccionTextBox
-            // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(86, 205);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(104, 20);
-            this.direccionTextBox.TabIndex = 38;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(86, 231);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(104, 20);
-            this.idTextBox.TabIndex = 40;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(86, 257);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(104, 20);
-            this.nombreTextBox.TabIndex = 42;
-            // 
-            // telefonoTextBox
-            // 
-            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(86, 283);
-            this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.telefonoTextBox.TabIndex = 44;
-            // 
-            // listaClientesBindingSource
-            // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.Rentas.Cliente);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -423,9 +368,64 @@
             this.activoDataGridViewCheckBoxColumn.HeaderText = "activo";
             this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
             // 
-            // clientesBLBindingSource
+            // activoCheckBox
             // 
-            this.clientesBLBindingSource.DataSource = typeof(BL.Rentas.ClientesBL);
+            this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaClientesBindingSource, "activo", true));
+            this.activoCheckBox.Location = new System.Drawing.Point(72, 302);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.activoCheckBox.TabIndex = 30;
+            this.activoCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // apellidoTextBox
+            // 
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Apellido", true));
+            this.apellidoTextBox.Location = new System.Drawing.Point(72, 174);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(143, 20);
+            this.apellidoTextBox.TabIndex = 32;
+            // 
+            // correoTextBox
+            // 
+            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Correo", true));
+            this.correoTextBox.Location = new System.Drawing.Point(72, 205);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(143, 20);
+            this.correoTextBox.TabIndex = 36;
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Direccion", true));
+            this.direccionTextBox.Location = new System.Drawing.Point(72, 236);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(143, 20);
+            this.direccionTextBox.TabIndex = 38;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(72, 105);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(143, 20);
+            this.idTextBox.TabIndex = 40;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(72, 142);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(143, 20);
+            this.nombreTextBox.TabIndex = 42;
+            // 
+            // telefonoTextBox
+            // 
+            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaClientesBindingSource, "Telefono", true));
+            this.telefonoTextBox.Location = new System.Drawing.Point(72, 270);
+            this.telefonoTextBox.Name = "telefonoTextBox";
+            this.telefonoTextBox.Size = new System.Drawing.Size(143, 20);
+            this.telefonoTextBox.TabIndex = 44;
             // 
             // clienteBindingSource
             // 
@@ -460,10 +460,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingNavigator)).EndInit();
             this.clientesBLBindingNavigator.ResumeLayout(false);
             this.clientesBLBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

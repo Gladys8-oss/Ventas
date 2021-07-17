@@ -148,7 +148,7 @@
             this.Button2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button2.Location = new System.Drawing.Point(147, 232);
             this.Button2.Name = "Button2";
-            this.Button2.Size = new System.Drawing.Size(71, 28);
+            this.Button2.Size = new System.Drawing.Size(80, 28);
             this.Button2.TabIndex = 7;
             this.Button2.Tag = "";
             this.Button2.Text = "Ingresar";
@@ -225,7 +225,7 @@
             this.Button3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button3.Location = new System.Drawing.Point(147, 275);
             this.Button3.Name = "Button3";
-            this.Button3.Size = new System.Drawing.Size(71, 28);
+            this.Button3.Size = new System.Drawing.Size(80, 28);
             this.Button3.TabIndex = 6;
             this.Button3.Tag = "";
             this.Button3.Text = "Salir";

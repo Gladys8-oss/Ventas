@@ -35,8 +35,8 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label servicioLabel;
             System.Windows.Forms.Label fecha_CitaLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6Citas));
             System.Windows.Forms.Label estatusLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6Citas));
             this.listaCitasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaCitasBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -83,7 +83,7 @@
             // 
             clienteLabel.AutoSize = true;
             clienteLabel.BackColor = System.Drawing.Color.Transparent;
-            clienteLabel.Location = new System.Drawing.Point(14, 82);
+            clienteLabel.Location = new System.Drawing.Point(2, 126);
             clienteLabel.Name = "clienteLabel";
             clienteLabel.Size = new System.Drawing.Size(42, 13);
             clienteLabel.TabIndex = 15;
@@ -93,7 +93,7 @@
             // 
             empleadoLabel.AutoSize = true;
             empleadoLabel.BackColor = System.Drawing.Color.Transparent;
-            empleadoLabel.Location = new System.Drawing.Point(14, 108);
+            empleadoLabel.Location = new System.Drawing.Point(3, 163);
             empleadoLabel.Name = "empleadoLabel";
             empleadoLabel.Size = new System.Drawing.Size(57, 13);
             empleadoLabel.TabIndex = 17;
@@ -103,7 +103,7 @@
             // 
             horaLabel.AutoSize = true;
             horaLabel.BackColor = System.Drawing.Color.Transparent;
-            horaLabel.Location = new System.Drawing.Point(14, 186);
+            horaLabel.Location = new System.Drawing.Point(3, 240);
             horaLabel.Name = "horaLabel";
             horaLabel.Size = new System.Drawing.Size(33, 13);
             horaLabel.TabIndex = 23;
@@ -113,7 +113,7 @@
             // 
             idLabel.AutoSize = true;
             idLabel.BackColor = System.Drawing.Color.Transparent;
-            idLabel.Location = new System.Drawing.Point(14, 212);
+            idLabel.Location = new System.Drawing.Point(8, 91);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
             idLabel.TabIndex = 25;
@@ -123,7 +123,7 @@
             // 
             servicioLabel.AutoSize = true;
             servicioLabel.BackColor = System.Drawing.Color.Transparent;
-            servicioLabel.Location = new System.Drawing.Point(14, 238);
+            servicioLabel.Location = new System.Drawing.Point(4, 290);
             servicioLabel.Name = "servicioLabel";
             servicioLabel.Size = new System.Drawing.Size(48, 13);
             servicioLabel.TabIndex = 27;
@@ -132,11 +132,22 @@
             // fecha_CitaLabel
             // 
             fecha_CitaLabel.AutoSize = true;
-            fecha_CitaLabel.Location = new System.Drawing.Point(14, 162);
+            fecha_CitaLabel.BackColor = System.Drawing.Color.Transparent;
+            fecha_CitaLabel.Location = new System.Drawing.Point(1, 331);
             fecha_CitaLabel.Name = "fecha_CitaLabel";
             fecha_CitaLabel.Size = new System.Drawing.Size(61, 13);
             fecha_CitaLabel.TabIndex = 30;
             fecha_CitaLabel.Text = "Fecha Cita:";
+            // 
+            // estatusLabel1
+            // 
+            estatusLabel1.AutoSize = true;
+            estatusLabel1.BackColor = System.Drawing.Color.Transparent;
+            estatusLabel1.Location = new System.Drawing.Point(4, 196);
+            estatusLabel1.Name = "estatusLabel1";
+            estatusLabel1.Size = new System.Drawing.Size(45, 13);
+            estatusLabel1.TabIndex = 31;
+            estatusLabel1.Text = "Estatus:";
             // 
             // listaCitasBindingSource
             // 
@@ -292,7 +303,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.citasBL_CitasDataGridView.DataSource = this.listaCitasBindingSource;
-            this.citasBL_CitasDataGridView.Location = new System.Drawing.Point(198, 53);
+            this.citasBL_CitasDataGridView.Location = new System.Drawing.Point(210, 53);
             this.citasBL_CitasDataGridView.Name = "citasBL_CitasDataGridView";
             this.citasBL_CitasDataGridView.Size = new System.Drawing.Size(669, 421);
             this.citasBL_CitasDataGridView.TabIndex = 15;
@@ -336,60 +347,51 @@
             // clienteTextBox
             // 
             this.clienteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Cliente", true));
-            this.clienteTextBox.Location = new System.Drawing.Point(81, 79);
+            this.clienteTextBox.Location = new System.Drawing.Point(64, 122);
             this.clienteTextBox.Name = "clienteTextBox";
-            this.clienteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.clienteTextBox.Size = new System.Drawing.Size(142, 20);
             this.clienteTextBox.TabIndex = 16;
             // 
             // empleadoTextBox
             // 
             this.empleadoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Empleado", true));
-            this.empleadoTextBox.Location = new System.Drawing.Point(81, 105);
+            this.empleadoTextBox.Location = new System.Drawing.Point(64, 160);
             this.empleadoTextBox.Name = "empleadoTextBox";
-            this.empleadoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.empleadoTextBox.Size = new System.Drawing.Size(142, 20);
             this.empleadoTextBox.TabIndex = 18;
             // 
             // horaTextBox
             // 
             this.horaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Hora", true));
-            this.horaTextBox.Location = new System.Drawing.Point(81, 183);
+            this.horaTextBox.Location = new System.Drawing.Point(65, 238);
             this.horaTextBox.Name = "horaTextBox";
-            this.horaTextBox.Size = new System.Drawing.Size(100, 20);
+            this.horaTextBox.Size = new System.Drawing.Size(141, 20);
             this.horaTextBox.TabIndex = 24;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(81, 209);
+            this.idTextBox.Location = new System.Drawing.Point(64, 88);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idTextBox.Size = new System.Drawing.Size(142, 20);
             this.idTextBox.TabIndex = 26;
             // 
             // servicioTextBox
             // 
             this.servicioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Servicio", true));
-            this.servicioTextBox.Location = new System.Drawing.Point(81, 235);
+            this.servicioTextBox.Location = new System.Drawing.Point(65, 283);
             this.servicioTextBox.Name = "servicioTextBox";
-            this.servicioTextBox.Size = new System.Drawing.Size(100, 20);
+            this.servicioTextBox.Size = new System.Drawing.Size(141, 20);
             this.servicioTextBox.TabIndex = 28;
             // 
             // fecha_CitaDateTimePicker
             // 
             this.fecha_CitaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaCitasBindingSource, "Fecha_Cita", true));
-            this.fecha_CitaDateTimePicker.Location = new System.Drawing.Point(81, 158);
+            this.fecha_CitaDateTimePicker.Location = new System.Drawing.Point(64, 327);
             this.fecha_CitaDateTimePicker.Name = "fecha_CitaDateTimePicker";
-            this.fecha_CitaDateTimePicker.Size = new System.Drawing.Size(100, 20);
+            this.fecha_CitaDateTimePicker.Size = new System.Drawing.Size(142, 20);
             this.fecha_CitaDateTimePicker.TabIndex = 31;
-            // 
-            // estatusLabel1
-            // 
-            estatusLabel1.AutoSize = true;
-            estatusLabel1.Location = new System.Drawing.Point(14, 141);
-            estatusLabel1.Name = "estatusLabel1";
-            estatusLabel1.Size = new System.Drawing.Size(45, 13);
-            estatusLabel1.TabIndex = 31;
-            estatusLabel1.Text = "Estatus:";
             // 
             // estatusComboBox
             // 
@@ -398,9 +400,9 @@
             this.estatusComboBox.Items.AddRange(new object[] {
             "Programada",
             "En progreso"});
-            this.estatusComboBox.Location = new System.Drawing.Point(81, 133);
+            this.estatusComboBox.Location = new System.Drawing.Point(64, 193);
             this.estatusComboBox.Name = "estatusComboBox";
-            this.estatusComboBox.Size = new System.Drawing.Size(100, 21);
+            this.estatusComboBox.Size = new System.Drawing.Size(142, 21);
             this.estatusComboBox.TabIndex = 32;
             // 
             // Form6Citas
