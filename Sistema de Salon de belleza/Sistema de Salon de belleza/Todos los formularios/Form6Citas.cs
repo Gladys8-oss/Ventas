@@ -37,7 +37,7 @@ namespace Sistema_de_Salon_de_belleza
             {
                 listaCitasBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarHabilitarBotones(true);
-
+                MessageBox.Show("Citas Guardada Correctamente");
             }
             else
             {
@@ -68,12 +68,12 @@ namespace Sistema_de_Salon_de_belleza
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (idCitaTextBox.Text != "")
+            if (idTextBox.Text != "")
             {
                 var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
-                    var idcita = Convert.ToInt32(idCitaTextBox.Text);
+                    var idcita = Convert.ToInt32(idTextBox.Text);
                     Eliminar(idcita);
                 }
             }
@@ -96,7 +96,13 @@ namespace Sistema_de_Salon_de_belleza
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _citas.CancelarCambios();
             DeshabilitarHabilitarHabilitarBotones(true);
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -5,26 +5,26 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BL.Rentas.CitasBL;
 
 namespace BL.Rentas
 {
     public class ClientesBL
     {
-        ContextoClientes _contextoclientes;
-       // Contexto _contexto;
+         Contexto _contexto;
         public BindingList<Cliente> ListaClientes { get; set; }
 
         public ClientesBL()
         {
-            _contextoclientes = new ContextoClientes();
+            _contexto = new Contexto();
             ListaClientes = new BindingList<Cliente>();
 
 
         }
         public BindingList<Cliente> ObtenerClientes()
         {
-            _contextoclientes.Cliente.Load();
-            ListaClientes = _contextoclientes.Cliente.Local.ToBindingList();
+            _contexto.Cliente.Load();
+            ListaClientes = _contexto.Cliente.Local.ToBindingList();
 
 
             return ListaClientes;
@@ -38,10 +38,8 @@ namespace BL.Rentas
                 return resultado;
             }
 
-            if (cliente.IdCliente == 0)
-            {
-                cliente.IdCliente = ListaClientes.Max(item => item.IdCliente) + 1;
-            }
+            _contexto.SaveChanges();
+            resultado.Exitoso = true;
             return resultado;
         }
 
@@ -51,31 +49,40 @@ namespace BL.Rentas
             ListaClientes.Add(nuevoCliente);
         }
 
-        public bool EliminarClientes(int IdCliente)
+        public bool EliminarClientes(int Id)
         {
             foreach (var clientes in ListaClientes)
             {
-                if (clientes.IdCliente == IdCliente)
+                if (clientes.Id == Id)
                 {
                     ListaClientes.Remove(clientes);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
             return false;
         }
-        public static implicit operator ClientesBL(ProductosBL v)
+    /*    public static implicit operator ClientesBL(Cliente v)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
+            public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+        }
         private Resultado Validar(Cliente cliente)
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            
 
-            if (string.IsNullOrEmpty(cliente.Apellido ) == true )
+
+            if (string.IsNullOrEmpty(cliente.Apellido) == true)
             {
                 resultado.Mensaje = "ingrese un apellido";
                 resultado.Exitoso = false;
@@ -93,15 +100,17 @@ namespace BL.Rentas
     }
     public class Cliente
     {
-        public int IdCliente { get; set; }
+        public int Id { get; set; } 
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public bool activo { get; set; }
+ //       public int ClienteId { get; set; }
+        
     }
 
-   
-    
+
+
 }

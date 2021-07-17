@@ -1,23 +1,24 @@
 ﻿using System;
+using BL.Rentas;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BL.Rentas.CitasBL;
 
 namespace BL.Rentas 
 {
    public  class ProductosBL
     {
         Contexto _contexto;
-       // Contexto _contexto;
         public BindingList<Producto> ListaProductos { get; set;  }
 
         public ProductosBL()
         {
             _contexto = new Contexto();
-            ListaProductos = new BindingList<Producto>();
+             ListaProductos = new BindingList<Producto>();
         }
         public BindingList<Producto> ObtenerProductos()
         {
@@ -36,10 +37,7 @@ namespace BL.Rentas
                 return resultado;
             }
 
-            if (producto.Id == 0 )
-            {
-                producto.Id = ListaProductos.Max(item => item.Id) + 1;
-            }
+            _contexto.SaveChanges();
 
             resultado.Exitoso = true;
             return resultado;
@@ -58,34 +56,57 @@ namespace BL.Rentas
                 if (productos.Id  == Id)
                 {
                     ListaProductos.Remove(productos);
+                    _contexto.SaveChanges();
                     return true;
                 } 
             }
             return false;
+        }
+
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
         }
         private Resultado Validar(Producto producto)
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if (string.IsNullOrEmpty(producto.Descripcion) == true)
-            {
-                resultado.Mensaje = "Ingrese una descripcion";
-                resultado.Exitoso = false;
-            }
+                  if (string.IsNullOrEmpty(producto.Descripcion) == true)
+                  {
+                      resultado.Mensaje = "Ingrese una descripcion";
+                      resultado.Exitoso = false;
+                  }
 
-            if (producto.Existencia <0)
-            {
-                resultado.Mensaje = "La existencia debe de ser mayor a cero";
-                resultado.Exitoso = false;
+                  if (producto.Existencia <0)
+                  {
+                      resultado.Mensaje = "La existencia debe de ser mayor a cero";
+                      resultado.Exitoso = false;
 
-            }
-
+                  }
+                  
             if (producto.Precio < 0)
             {
                 resultado.Mensaje = "La precio debe de ser mayor a cero";
                 resultado.Exitoso = false;
 
+            }
+
+            if (producto.CategoriaId ==0)
+            {
+                resultado.Mensaje = "Seleccione una Categoria";
+                resultado.Exitoso = false;
+
+            }
+
+            if (producto.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un Tipo";
+                resultado.Exitoso = false;
             }
             return resultado;
         }
@@ -98,6 +119,11 @@ public class Producto
         public double Precio { get; set; }
         public int Existencia { get; set; }
         public bool Activo { get; set; }
+        public byte[] Foto { get; set; }
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
+        public int CategoriaId { get; set; } 
+        public Categoria Categoria { get; set; }
     }
 
     public class Resultado

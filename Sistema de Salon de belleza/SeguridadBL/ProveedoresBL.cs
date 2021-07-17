@@ -21,10 +21,19 @@ namespace BL.Rentas
         }
         public BindingList<Proveedores> ObtenerProveedores()
         {
-         //   _contexto.Proveedores.Load();
-         //   ListaProveedores = _contexto.Proveedores.Local.ToBindingList();
+            _contexto.Proveedores.Load();
+            ListaProveedores = _contexto.Proveedores.Local.ToBindingList();
 
             return ListaProveedores;
+        }
+
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
         }
 
         public Resultado GuardarProveedores(Proveedores proveedores)
@@ -34,10 +43,10 @@ namespace BL.Rentas
             {
                 return resultado;
             }
-            if (proveedores.IdProveedor == 0)
-            {
-                proveedores.IdProveedor = ListaProveedores.Max(item => item.IdProveedor) + 1;
-            }
+
+            _contexto.SaveChanges();
+
+            resultado.Exitoso = true;
             return resultado;
         }
 
@@ -47,13 +56,14 @@ namespace BL.Rentas
             ListaProveedores.Add(nuevoProveedor);
         }
 
-        public bool EliminarProveedores(int IdProveedor)
+        public bool EliminarProveedores(int Id)
         {
             foreach (var proveedores in ListaProveedores)
             {
-                if (proveedores.IdProveedor == IdProveedor)
+                if (proveedores.Id == Id)
                 {
                     ListaProveedores.Remove(proveedores);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
@@ -65,31 +75,25 @@ namespace BL.Rentas
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            
 
-            if (string.IsNullOrEmpty(proveedores.NombreContacto) == true)
-            {
-                resultado.Mensaje = "Ingrese el nombre del contacto";
-                resultado.Exitoso = false;
-            }
 
-            if (string.IsNullOrEmpty(proveedores.Telefono) == true)
-            {
-                resultado.Mensaje = "Ingrese el telefono";
-                resultado.Exitoso = false;
-            }
+                 if (string.IsNullOrEmpty(proveedores.NombreContacto) == true)
+                 {
+                     resultado.Mensaje = "Ingrese el nombre del contacto";
+                     resultado.Exitoso = false;
+                 }
 
-            if (string.IsNullOrEmpty(proveedores.NombreCompania) == true)
-            {
-                resultado.Mensaje = "Ingrese el nombre de la compañia";
-                resultado.Exitoso = false;
-            }
+                if (string.IsNullOrEmpty(proveedores.NombreCompania) == true)
+                 {
+                     resultado.Mensaje = "Ingrese el nombre de la compañia";
+                     resultado.Exitoso = false;
+                 }
             return resultado;
         }
     }
     public class Proveedores
     {
-        public int IdProveedor { get; set; }
+        public int Id { get; set; }
         public string NombreCompania { get; set; }
         public string NombreContacto { get; set; }
         public string Ciudad { get; set; }

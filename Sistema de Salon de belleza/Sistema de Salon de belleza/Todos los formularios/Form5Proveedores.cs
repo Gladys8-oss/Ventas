@@ -35,7 +35,7 @@ namespace Sistema_de_Salon_de_belleza
             {
                 listaProveedoresBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarHabilitarBotones(true);
-
+                MessageBox.Show("Proveedores Guardado");
             }
             else
             {
@@ -67,12 +67,12 @@ namespace Sistema_de_Salon_de_belleza
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (idProveedorTextBox.Text != "")
+            if (idTextBox.Text != "")
             {
                 var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
-                    var idproveedor = Convert.ToInt32(idProveedorTextBox.Text);
+                    var idproveedor = Convert.ToInt32(idTextBox.Text);
                     Eliminar(idproveedor);
                 }
                 
@@ -96,6 +96,7 @@ namespace Sistema_de_Salon_de_belleza
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _proveedores.CancelarCambios();
             DeshabilitarHabilitarHabilitarBotones(true);
 
         }

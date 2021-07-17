@@ -37,6 +37,7 @@ namespace Sistema_de_Salon_de_belleza
             {
                 listaClientesBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarHabilitarBotones(true);
+                MessageBox.Show("Cliente Guardado");
             }
             else
             {
@@ -72,12 +73,12 @@ namespace Sistema_de_Salon_de_belleza
 
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (idClienteTextBox1.Text != "")
+            if (idTextBox.Text != "")
             {
                 var resultado = MessageBox.Show("Desea eliminar este registro?", "Eliminar", MessageBoxButtons.YesNo);
                 if (resultado == DialogResult.Yes)
                 {
-                    var idcliente = Convert.ToInt32(idClienteTextBox1.Text);
+                    var idcliente = Convert.ToInt32(idTextBox.Text);
                     Eliminar(idcliente);
                 }
                 
@@ -101,6 +102,7 @@ namespace Sistema_de_Salon_de_belleza
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _clientes.CancelarCambios();
             DeshabilitarHabilitarHabilitarBotones(true);
 
         }

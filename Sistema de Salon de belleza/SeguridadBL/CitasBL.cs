@@ -22,10 +22,19 @@ namespace BL.Rentas
         }
         public BindingList<Citas> ObtenerCitas()
         {
-          //  _contexto.Citas.Load();
-          //  ListaCitas = _contexto.Citas.Local.ToBindingList();
+            _contexto.Citas.Load();
+            ListaCitas = _contexto.Citas.Local.ToBindingList();
             
             return ListaCitas;
+        }
+
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
         }
 
         public Resultado GuardarCitas(Citas citas)
@@ -35,10 +44,10 @@ namespace BL.Rentas
             {
                 return resultado;
             }
-            if (citas.IdCita == 0)
-            {
-                citas.IdCita = ListaCitas.Max(item => item.IdCita) + 1;
-            }
+
+            _contexto.SaveChanges();
+
+            resultado.Exitoso = true;
             return resultado;
         }
 
@@ -48,13 +57,14 @@ namespace BL.Rentas
             ListaCitas.Add(nuevaCita);
         }
 
-        public bool EliminarCitas(int IdCita)
+        public bool EliminarCitas(int Id) 
         {
             foreach (var citas in ListaCitas)
             {
-                if (citas.IdCita == IdCita)
+                if (citas.Id == Id)
                 {
                     ListaCitas.Remove(citas);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
@@ -66,25 +76,6 @@ namespace BL.Rentas
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            
-
-            if (string.IsNullOrEmpty(citas.Cliente) == true)
-            {
-                resultado.Mensaje = "Ingrese el nombre del cliente";
-                resultado.Exitoso = false;
-            }
-
-            if (string.IsNullOrEmpty(citas.Empleado) == true)
-            {
-                resultado.Mensaje = "Ingrese el nombre del empleado";
-                resultado.Exitoso = false;
-            }
-
-            if (string.IsNullOrEmpty(citas.Servicio) == true)
-            {
-                resultado.Mensaje = "Ingrese el nombre del servicio que desea el cliente";
-                resultado.Exitoso = false;
-            }
 
             if (string.IsNullOrEmpty(citas.Fecha_Cita) == true)
             {
@@ -96,7 +87,7 @@ namespace BL.Rentas
 
         public class Citas
         {
-            public int IdCita { get; set; }
+            public int Id { get; set; }
             public string Fecha_Cita { get; set; }
             public string Hora { get; set; }
             public string Cliente { get; set; }
