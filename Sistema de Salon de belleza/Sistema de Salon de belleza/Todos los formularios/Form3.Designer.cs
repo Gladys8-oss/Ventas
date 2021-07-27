@@ -79,10 +79,10 @@
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.marcaTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
-            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
             fotoLabel = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
             categoriaIdLabel = new System.Windows.Forms.Label();
@@ -100,9 +100,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBLBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fotoLabel
@@ -189,11 +189,10 @@
             // tipoIdLabel
             // 
             tipoIdLabel.AutoSize = true;
-            tipoIdLabel.BackColor = System.Drawing.Color.Transparent;
-            tipoIdLabel.Location = new System.Drawing.Point(16, 269);
+            tipoIdLabel.Location = new System.Drawing.Point(59, 274);
             tipoIdLabel.Name = "tipoIdLabel";
             tipoIdLabel.Size = new System.Drawing.Size(43, 13);
-            tipoIdLabel.TabIndex = 166;
+            tipoIdLabel.TabIndex = 161;
             tipoIdLabel.Text = "Tipo Id:";
             // 
             // bindingNavigatorMoveFirstItem
@@ -405,7 +404,7 @@
             this.listaProductosDataGridView.DataSource = this.ListaProductosBindingSource;
             this.listaProductosDataGridView.Location = new System.Drawing.Point(245, 61);
             this.listaProductosDataGridView.Name = "listaProductosDataGridView";
-            this.listaProductosDataGridView.Size = new System.Drawing.Size(598, 412);
+            this.listaProductosDataGridView.Size = new System.Drawing.Size(643, 412);
             this.listaProductosDataGridView.TabIndex = 146;
             // 
             // idDataGridViewTextBoxColumn
@@ -537,32 +536,27 @@
             this.precioTextBox.Size = new System.Drawing.Size(150, 20);
             this.precioTextBox.TabIndex = 161;
             // 
-            // tipoIdComboBox
+            // listaTiposBindingSource
             // 
-            this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ListaProductosBindingSource, "TipoId", true));
-            this.tipoIdComboBox.DataSource = this.ListaProductosBindingSource;
-            this.tipoIdComboBox.DisplayMember = "Descripcion";
-            this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.tipoIdComboBox.FormattingEnabled = true;
-            this.tipoIdComboBox.Location = new System.Drawing.Point(84, 266);
-            this.tipoIdComboBox.Name = "tipoIdComboBox";
-            this.tipoIdComboBox.Size = new System.Drawing.Size(150, 21);
-            this.tipoIdComboBox.TabIndex = 167;
-            this.tipoIdComboBox.ValueMember = "Id";
-            this.tipoIdComboBox.SelectedIndexChanged += new System.EventHandler(this.tipoIdComboBox_SelectedIndexChanged);
-            // 
-            // tipoBindingSource
-            // 
-            this.tipoBindingSource.DataSource = typeof(BL.Rentas.Tipo);
+            this.listaTiposBindingSource.DataMember = "ListaTipos";
+            this.listaTiposBindingSource.DataSource = this.tipoBLBindingSource;
             // 
             // tipoBLBindingSource
             // 
             this.tipoBLBindingSource.DataSource = typeof(BL.Rentas.TipoBL);
             // 
-            // listaTiposBindingSource
+            // tipoBindingSource
             // 
-            this.listaTiposBindingSource.DataMember = "ListaTipos";
-            this.listaTiposBindingSource.DataSource = this.tipoBLBindingSource;
+            this.tipoBindingSource.DataSource = typeof(BL.Rentas.Tipo);
+            // 
+            // tipoIdComboBox
+            // 
+            this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ListaProductosBindingSource, "TipoId", true));
+            this.tipoIdComboBox.FormattingEnabled = true;
+            this.tipoIdComboBox.Location = new System.Drawing.Point(108, 271);
+            this.tipoIdComboBox.Name = "tipoIdComboBox";
+            this.tipoIdComboBox.Size = new System.Drawing.Size(121, 21);
+            this.tipoIdComboBox.TabIndex = 162;
             // 
             // FormProductos
             // 
@@ -609,9 +603,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.productosBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaProductosDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaCategoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBLBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,9 +652,9 @@
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox marcaTextBox;
         private System.Windows.Forms.TextBox precioTextBox;
-        private System.Windows.Forms.ComboBox tipoIdComboBox;
         private System.Windows.Forms.BindingSource tipoBindingSource;
         private System.Windows.Forms.BindingSource tipoBLBindingSource;
         private System.Windows.Forms.BindingSource listaTiposBindingSource;
+        private System.Windows.Forms.ComboBox tipoIdComboBox;
     }
 }

@@ -129,6 +129,7 @@
             this.TextBox1.Name = "TextBox1";
             this.TextBox1.Size = new System.Drawing.Size(164, 20);
             this.TextBox1.TabIndex = 4;
+            this.TextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1_KeyPress);
             // 
             // PictureBox4
             // 
