@@ -63,17 +63,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form11fac.cs">
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\Form11fac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form11fac.Designer.cs">
+    <Compile Include="Todos los formularios\Form11fac.Designer.cs">
       <DependentUpon>Form11fac.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Todos los formularios\Form10Factura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Todos los formularios\Form10Factura.Designer.cs">
-      <DependentUpon>Form10Factura.cs</DependentUpon>
     </Compile>
     <Compile Include="Todos los formularios\Form6Citas.cs">
       <SubType>Form</SubType>
@@ -131,17 +133,9 @@
     <Compile Include="Todos los formularios\Form9Calendario.Designer.cs">
       <DependentUpon>Form9Calendario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Todos los formularios\Prueba.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Todos los formularios\Prueba.Designer.cs">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Form11fac.resx">
+    <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="Todos los formularios\Form11fac.resx">
       <DependentUpon>Form11fac.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Todos los formularios\Form10Factura.resx">
-      <DependentUpon>Form10Factura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Todos los formularios\Form6Citas.resx">
       <DependentUpon>Form6Citas.cs</DependentUpon>
@@ -180,9 +174,17 @@
     <EmbeddedResource Include="Todos los formularios\Form9Calendario.resx">
       <DependentUpon>Form9Calendario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Todos los formularios\Prueba.resx">
-      <DependentUpon>Prueba.cs</DependentUpon>
-    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Rentas.Categoria.datasource" />
     <None Include="Properties\DataSources\BL.Rentas.CategoriaBL.datasource" />

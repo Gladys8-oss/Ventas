@@ -203,5 +203,21 @@ namespace Sistema_de_Salon_de_belleza.Todos_los_formularios
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var buscar = textBox1.Text;
+
+            if (string.IsNullOrEmpty(buscar)== true)
+            {
+                ListaProductosBindingSource.DataSource = _productos.ObtenerProductos();
+            }
+            else
+            {
+                ListaProductosBindingSource.DataSource = _productos.ObtenerProductos(buscar);
+            }
+
+            ListaProductosBindingSource.ResetBindings(false);
+        }
     }
 }

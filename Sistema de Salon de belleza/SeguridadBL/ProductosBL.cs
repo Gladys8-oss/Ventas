@@ -15,18 +15,34 @@ namespace BL.Rentas
         Contexto _contexto;
         public BindingList<Producto> ListaProductos { get; set;  }
 
+        TipoBL _tipoBL;
+        public BindingList<Tipo> ListaTipos { get; set;  }
         public ProductosBL()
         {
             _contexto = new Contexto();
              ListaProductos = new BindingList<Producto>();
+
+            _tipoBL = new TipoBL();
+            ListaTipos = new BindingList<Tipo>();
         }
         public BindingList<Producto> ObtenerProductos()
         {
             _contexto.Productos.Load();
             ListaProductos = _contexto.Productos.Local.ToBindingList();
 
-
             return ListaProductos;
+        }
+
+        public BindingList<Producto> ObtenerProductos(string buscar)
+        {
+            var query = _contexto.Productos
+            .Where(p => p.Descripcion.ToLower()
+            .Contains(buscar.ToLower()) == true)
+            .ToList();
+
+            var resultado = new BindingList<Producto>(query);
+
+            return resultado;
         }
 
         public Resultado GuardarProducto(Producto producto)

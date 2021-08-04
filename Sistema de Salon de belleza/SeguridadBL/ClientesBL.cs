@@ -23,11 +23,22 @@ namespace BL.Rentas
         }
         public BindingList<Cliente> ObtenerClientes()
         {
-            _contexto.Cliente.Load();
-            ListaClientes = _contexto.Cliente.Local.ToBindingList();
-
+            ListaClientes = new BindingList<Cliente>(
+                _contexto.Cliente.OrderBy(o => o.Nombre). ToList());
 
             return ListaClientes;
+        }
+
+        public BindingList<Cliente> ObtenerClientes(string buscar)
+        {
+            var query = _contexto.Cliente
+             .Where(p => p.Nombre.ToLower()
+             .Contains(buscar.ToLower()) == true)
+             .ToList();
+
+            var resultado = new BindingList<Cliente>(query);
+
+            return resultado;
         }
 
         public Resultado GuardarCliente(Cliente cliente)

@@ -58,16 +58,20 @@ namespace Sistema_de_Salon_de_belleza
             Button2.Text = "Verificando...";
             Application.DoEvents();
 
-            var resultado = _seguridad.Automatizar(usuario,contrasena);
+            var usuarioDB = _seguridad.Automatizar(usuario,contrasena);
 
-            if (resultado == true)
+            if (usuarioDB != null)
             {
+                Utilidades.NombreUsuario = usuarioDB.Nombre;
                 this.Close();
             }else
             {
                 MessageBox.Show("--- Usuario y contraseña incorrectos ---");
             }
-            
+
+
+            Button2.Enabled = true;
+            Button2.Text = "Aceptar";
         }
 
         private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -77,6 +81,17 @@ namespace Sistema_de_Salon_de_belleza
                 if (e.KeyChar == (char)Keys.Enter)
                 {
                     TextBox2.Focus();
+                }
+            }
+        }
+
+        private void TextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (TextBox2.Text != "")
+            {
+                if (e.KeyChar == (char)Keys.Enter)
+                {
+                    Button2.PerformClick();
                 }
             }
         }

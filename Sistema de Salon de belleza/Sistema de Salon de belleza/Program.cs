@@ -6,11 +6,13 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BL.Rentas.SeguridadBl;
 
 namespace Sistema_de_Salon_de_belleza
 {
     static class Program
     {
+      
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

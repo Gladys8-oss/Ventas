@@ -22,7 +22,12 @@ namespace Sistema_de_Salon_de_belleza
         {
             var form1 = new Form1();
             form1.ShowDialog();
+
+
+            toolStripStatusLabel1.Text = "Usuariog: " + Utilidades.NombreUsuario;
+                  
         }
+        
         private void Form2_Load(object sender, EventArgs e)
         {
             var form1 = new Form1();

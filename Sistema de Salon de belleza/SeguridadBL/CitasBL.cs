@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static BL.Rentas.EmpleadosBL;
 
 namespace BL.Rentas 
 {
@@ -12,13 +13,19 @@ namespace BL.Rentas
     public class CitasBL
     {
         Contexto _contexto;
+        EmpleadosBL _empleados;
+
         public BindingList<Citas> ListaCitas { get; set; } 
+        public BindingList<Empleados> ListaEpleados { get; set; }
 
         public CitasBL()
         {
             _contexto = new Contexto();
             ListaCitas = new BindingList<Citas>();
-            
+
+            _empleados = new EmpleadosBL();
+            ListaEpleados = new BindingList<Empleados>();
+
         }
         public BindingList<Citas> ObtenerCitas()
         {

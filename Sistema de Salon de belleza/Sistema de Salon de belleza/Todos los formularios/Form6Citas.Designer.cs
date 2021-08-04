@@ -394,8 +394,10 @@
             // empleadoComboBox
             // 
             this.empleadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Empleado", true));
+            this.empleadoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.listaCitasBindingSource, "Empleado", true));
             this.empleadoComboBox.DataSource = this.listaEmpleadosBindingSource;
             this.empleadoComboBox.DisplayMember = "Nombre";
+            this.empleadoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.empleadoComboBox.FormattingEnabled = true;
             this.empleadoComboBox.Location = new System.Drawing.Point(66, 156);
             this.empleadoComboBox.Name = "empleadoComboBox";

@@ -19,7 +19,7 @@ namespace BL.Rentas
        /* public string Contrasena { get; private set; }
         public string Nombre { get; private set; }*/
 
-        public  bool Automatizar(string usuario, string contrasena)
+        public  UsuariosDB Automatizar(string usuario, string contrasena)
         {
             var usuarios = _contexto.Usuarios.ToList();
 
@@ -27,17 +27,17 @@ namespace BL.Rentas
             {
                 if (usuario == usuariosDB.Nombre && contrasena == usuariosDB.Contrasena) 
                 {
-                    return true;
+                    return usuariosDB;
                 }
             }
 
-            return false;
+            return null;
         }
         public class UsuariosDB 
         {
             public int Id { get; set; }
             public string Nombre { get; set; } 
-            public string Contrasena { get; internal set; }
+            public string Contrasena { get; internal set; } 
         }
     }
 }

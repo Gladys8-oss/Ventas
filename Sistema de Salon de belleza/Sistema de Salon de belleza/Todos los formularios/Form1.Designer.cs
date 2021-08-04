@@ -219,6 +219,7 @@
             this.TextBox2.TabIndex = 3;
             this.TextBox2.Tag = "";
             this.TextBox2.UseSystemPasswordChar = true;
+            this.TextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox2_KeyPress);
             // 
             // Button3
             // 

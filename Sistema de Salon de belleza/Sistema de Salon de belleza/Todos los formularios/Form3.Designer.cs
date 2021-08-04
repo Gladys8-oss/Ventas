@@ -83,6 +83,8 @@
             this.tipoBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             fotoLabel = new System.Windows.Forms.Label();
             activoLabel = new System.Windows.Forms.Label();
             categoriaIdLabel = new System.Windows.Forms.Label();
@@ -131,9 +133,9 @@
             categoriaIdLabel.BackColor = System.Drawing.Color.Transparent;
             categoriaIdLabel.Location = new System.Drawing.Point(11, 99);
             categoriaIdLabel.Name = "categoriaIdLabel";
-            categoriaIdLabel.Size = new System.Drawing.Size(67, 13);
+            categoriaIdLabel.Size = new System.Drawing.Size(52, 13);
             categoriaIdLabel.TabIndex = 148;
-            categoriaIdLabel.Text = "Categoria Id:";
+            categoriaIdLabel.Text = "Categoria";
             // 
             // descripcionLabel
             // 
@@ -170,7 +172,7 @@
             // 
             marcaLabel.AutoSize = true;
             marcaLabel.BackColor = System.Drawing.Color.Transparent;
-            marcaLabel.Location = new System.Drawing.Point(12, 170);
+            marcaLabel.Location = new System.Drawing.Point(12, 169);
             marcaLabel.Name = "marcaLabel";
             marcaLabel.Size = new System.Drawing.Size(40, 13);
             marcaLabel.TabIndex = 158;
@@ -180,7 +182,7 @@
             // 
             precioLabel.AutoSize = true;
             precioLabel.BackColor = System.Drawing.Color.Transparent;
-            precioLabel.Location = new System.Drawing.Point(12, 233);
+            precioLabel.Location = new System.Drawing.Point(12, 231);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(40, 13);
             precioLabel.TabIndex = 160;
@@ -189,11 +191,12 @@
             // tipoIdLabel
             // 
             tipoIdLabel.AutoSize = true;
-            tipoIdLabel.Location = new System.Drawing.Point(59, 274);
+            tipoIdLabel.BackColor = System.Drawing.Color.Transparent;
+            tipoIdLabel.Location = new System.Drawing.Point(16, 271);
             tipoIdLabel.Name = "tipoIdLabel";
-            tipoIdLabel.Size = new System.Drawing.Size(43, 13);
+            tipoIdLabel.Size = new System.Drawing.Size(31, 13);
             tipoIdLabel.TabIndex = 161;
-            tipoIdLabel.Text = "Tipo Id:";
+            tipoIdLabel.Text = "Tipo ";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -296,6 +299,7 @@
             // seguridadBlBindingNavigator
             // 
             this.seguridadBlBindingNavigator.AddNewItem = null;
+            this.seguridadBlBindingNavigator.BackColor = System.Drawing.Color.Transparent;
             this.seguridadBlBindingNavigator.BindingSource = this.ListaProductosBindingSource;
             this.seguridadBlBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.seguridadBlBindingNavigator.DeleteItem = null;
@@ -475,7 +479,7 @@
             // 
             this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.ListaProductosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(89, 299);
+            this.activoCheckBox.Location = new System.Drawing.Point(88, 299);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(145, 24);
             this.activoCheckBox.TabIndex = 147;
@@ -552,11 +556,33 @@
             // tipoIdComboBox
             // 
             this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ListaProductosBindingSource, "TipoId", true));
+            this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ListaProductosBindingSource, "TipoId", true));
+            this.tipoIdComboBox.DataSource = this.listaTiposBindingSource;
+            this.tipoIdComboBox.DisplayMember = "Descripcion";
+            this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.tipoIdComboBox.FormattingEnabled = true;
-            this.tipoIdComboBox.Location = new System.Drawing.Point(108, 271);
+            this.tipoIdComboBox.Location = new System.Drawing.Point(84, 271);
             this.tipoIdComboBox.Name = "tipoIdComboBox";
-            this.tipoIdComboBox.Size = new System.Drawing.Size(121, 21);
+            this.tipoIdComboBox.Size = new System.Drawing.Size(149, 21);
             this.tipoIdComboBox.TabIndex = 162;
+            this.tipoIdComboBox.ValueMember = "Id";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(591, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 20);
+            this.textBox1.TabIndex = 163;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(752, 34);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 164;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // FormProductos
             // 
@@ -566,8 +592,10 @@
             this.BackgroundImage = global::Sistema_de_Salon_de_belleza.Properties.Resources.fondo_poligono_geometrico_papel_pintado_diamantes_patron_elegante_color_suave_206846_996;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(926, 515);
-            this.Controls.Add(tipoIdLabel);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.tipoIdComboBox);
+            this.Controls.Add(tipoIdLabel);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(categoriaIdLabel);
@@ -656,5 +684,7 @@
         private System.Windows.Forms.BindingSource tipoBLBindingSource;
         private System.Windows.Forms.BindingSource listaTiposBindingSource;
         private System.Windows.Forms.ComboBox tipoIdComboBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

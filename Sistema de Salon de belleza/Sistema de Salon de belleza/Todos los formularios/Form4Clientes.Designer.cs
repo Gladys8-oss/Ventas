@@ -50,18 +50,9 @@
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.clientesBLBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.clientesBLBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripButtonCancelar = new System.Windows.Forms.ToolStripButton();
             this.listaClientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaClientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
@@ -69,7 +60,18 @@
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
+            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clientesBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             activoLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
@@ -79,10 +81,10 @@
             telefonoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingNavigator)).BeginInit();
             this.clientesBLBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -284,10 +286,6 @@
             this.clientesBLBindingNavigator.TabIndex = 0;
             this.clientesBLBindingNavigator.Text = "bindingNavigator1";
             // 
-            // listaClientesBindingSource
-            // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.Rentas.Cliente);
-            // 
             // toolStripButtonCancelar
             // 
             this.toolStripButtonCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -304,10 +302,6 @@
             this.listaClientesBindingSource1.DataMember = "ListaClientes";
             this.listaClientesBindingSource1.DataSource = this.clientesBLBindingSource;
             // 
-            // clientesBLBindingSource
-            // 
-            this.clientesBLBindingSource.DataSource = typeof(BL.Rentas.ClientesBL);
-            // 
             // listaClientesDataGridView
             // 
             this.listaClientesDataGridView.AutoGenerateColumns = false;
@@ -321,52 +315,10 @@
             this.correoDataGridViewTextBoxColumn,
             this.activoDataGridViewCheckBoxColumn});
             this.listaClientesDataGridView.DataSource = this.listaClientesBindingSource;
-            this.listaClientesDataGridView.Location = new System.Drawing.Point(221, 62);
+            this.listaClientesDataGridView.Location = new System.Drawing.Point(221, 75);
             this.listaClientesDataGridView.Name = "listaClientesDataGridView";
-            this.listaClientesDataGridView.Size = new System.Drawing.Size(642, 431);
+            this.listaClientesDataGridView.Size = new System.Drawing.Size(642, 418);
             this.listaClientesDataGridView.TabIndex = 29;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // apellidoDataGridViewTextBoxColumn
-            // 
-            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
-            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
-            // 
-            // direccionDataGridViewTextBoxColumn
-            // 
-            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
-            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            // 
-            // correoDataGridViewTextBoxColumn
-            // 
-            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
-            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
-            // 
-            // activoDataGridViewCheckBoxColumn
-            // 
-            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "activo";
-            this.activoDataGridViewCheckBoxColumn.HeaderText = "activo";
-            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
             // 
             // activoCheckBox
             // 
@@ -427,9 +379,76 @@
             this.telefonoTextBox.Size = new System.Drawing.Size(143, 20);
             this.telefonoTextBox.TabIndex = 44;
             // 
+            // listaClientesBindingSource
+            // 
+            this.listaClientesBindingSource.DataSource = typeof(BL.Rentas.Cliente);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // apellidoDataGridViewTextBoxColumn
+            // 
+            this.apellidoDataGridViewTextBoxColumn.DataPropertyName = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.HeaderText = "Apellido";
+            this.apellidoDataGridViewTextBoxColumn.Name = "apellidoDataGridViewTextBoxColumn";
+            // 
+            // direccionDataGridViewTextBoxColumn
+            // 
+            this.direccionDataGridViewTextBoxColumn.DataPropertyName = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.HeaderText = "Direccion";
+            this.direccionDataGridViewTextBoxColumn.Name = "direccionDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            // 
+            // activoDataGridViewCheckBoxColumn
+            // 
+            this.activoDataGridViewCheckBoxColumn.DataPropertyName = "activo";
+            this.activoDataGridViewCheckBoxColumn.HeaderText = "activo";
+            this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
+            // 
+            // clientesBLBindingSource
+            // 
+            this.clientesBLBindingSource.DataSource = typeof(BL.Rentas.ClientesBL);
+            // 
             // clienteBindingSource
             // 
             this.clienteBindingSource.DataSource = typeof(BL.Rentas.Cliente);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(540, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 20);
+            this.textBox1.TabIndex = 45;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(713, 35);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form4Clientes
             // 
@@ -437,6 +456,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(883, 550);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(apellidoLabel);
@@ -460,10 +481,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingNavigator)).EndInit();
             this.clientesBLBindingNavigator.ResumeLayout(false);
             this.clientesBLBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -506,5 +527,7 @@
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

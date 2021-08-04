@@ -70,6 +70,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             activoLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -89,6 +90,7 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
+            activoLabel.BackColor = System.Drawing.Color.Transparent;
             activoLabel.Location = new System.Drawing.Point(200, 52);
             activoLabel.Name = "activoLabel";
             activoLabel.Size = new System.Drawing.Size(40, 13);
@@ -98,6 +100,7 @@
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
+            fechaLabel.BackColor = System.Drawing.Color.Transparent;
             fechaLabel.Location = new System.Drawing.Point(20, 113);
             fechaLabel.Name = "fechaLabel";
             fechaLabel.Size = new System.Drawing.Size(40, 13);
@@ -107,6 +110,7 @@
             // idLabel
             // 
             idLabel.AutoSize = true;
+            idLabel.BackColor = System.Drawing.Color.Transparent;
             idLabel.Location = new System.Drawing.Point(20, 52);
             idLabel.Name = "idLabel";
             idLabel.Size = new System.Drawing.Size(19, 13);
@@ -116,6 +120,7 @@
             // impuestoLabel
             // 
             impuestoLabel.AutoSize = true;
+            impuestoLabel.BackColor = System.Drawing.Color.Transparent;
             impuestoLabel.Location = new System.Drawing.Point(444, 379);
             impuestoLabel.Name = "impuestoLabel";
             impuestoLabel.Size = new System.Drawing.Size(53, 13);
@@ -125,6 +130,7 @@
             // subtotalLabel
             // 
             subtotalLabel.AutoSize = true;
+            subtotalLabel.BackColor = System.Drawing.Color.Transparent;
             subtotalLabel.Location = new System.Drawing.Point(444, 405);
             subtotalLabel.Name = "subtotalLabel";
             subtotalLabel.Size = new System.Drawing.Size(49, 13);
@@ -134,6 +140,7 @@
             // totalLabel
             // 
             totalLabel.AutoSize = true;
+            totalLabel.BackColor = System.Drawing.Color.Transparent;
             totalLabel.Location = new System.Drawing.Point(444, 431);
             totalLabel.Name = "totalLabel";
             totalLabel.Size = new System.Drawing.Size(34, 13);
@@ -143,6 +150,7 @@
             // clienteIdLabel1
             // 
             clienteIdLabel1.AutoSize = true;
+            clienteIdLabel1.BackColor = System.Drawing.Color.Transparent;
             clienteIdLabel1.Location = new System.Drawing.Point(20, 86);
             clienteIdLabel1.Name = "clienteIdLabel1";
             clienteIdLabel1.Size = new System.Drawing.Size(42, 13);
@@ -157,6 +165,7 @@
             // listaFacturasBindingNavigator
             // 
             this.listaFacturasBindingNavigator.AddNewItem = null;
+            this.listaFacturasBindingNavigator.BackColor = System.Drawing.Color.Transparent;
             this.listaFacturasBindingNavigator.BindingSource = this.listaFacturasBindingSource;
             this.listaFacturasBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.listaFacturasBindingNavigator.DeleteItem = null;
@@ -294,13 +303,14 @@
             // 
             // activoCheckBox
             // 
+            this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
             this.activoCheckBox.Location = new System.Drawing.Point(260, 47);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(158, 24);
             this.activoCheckBox.TabIndex = 2;
-            this.activoCheckBox.UseVisualStyleBackColor = true;
+            this.activoCheckBox.UseVisualStyleBackColor = false;
             // 
             // fechaDateTimePicker
             // 
@@ -425,29 +435,36 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(524, 98);
+            this.button1.Location = new System.Drawing.Point(524, 86);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 31);
+            this.button1.Size = new System.Drawing.Size(71, 43);
             this.button1.TabIndex = 16;
-            this.button1.Text = "+";
+            this.toolTip1.SetToolTip(this.button1, "Agregar Producto");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(613, 98);
+            this.button2.Location = new System.Drawing.Point(613, 86);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 31);
+            this.button2.Size = new System.Drawing.Size(75, 43);
             this.button2.TabIndex = 17;
-            this.button2.Text = "-";
+            this.toolTip1.SetToolTip(this.button2, "Eliminar Producto");
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.Location = new System.Drawing.Point(541, 47);
@@ -456,11 +473,13 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "ANULADO";
             this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form11fac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(711, 459);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
@@ -481,6 +500,8 @@
             this.Controls.Add(totalLabel);
             this.Controls.Add(this.totalTextBox);
             this.Controls.Add(this.listaFacturasBindingNavigator);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form11fac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Factura";
@@ -533,5 +554,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

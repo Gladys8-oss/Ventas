@@ -107,6 +107,20 @@ namespace Sistema_de_Salon_de_belleza
 
         }
 
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var buscar = textBox1.Text;
+
+            if (string.IsNullOrEmpty(buscar) == true)
+            {
+                listaClientesBindingSource.DataSource = _clientes.ObtenerClientes();
+            }
+            else
+            {
+                listaClientesBindingSource.DataSource = _clientes.ObtenerClientes(buscar);
+            }
+
+            listaClientesBindingSource.ResetBindings(false);
+        }
     }
 }

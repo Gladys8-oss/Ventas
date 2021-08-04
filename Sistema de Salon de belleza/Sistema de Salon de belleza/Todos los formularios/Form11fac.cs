@@ -159,5 +159,10 @@ namespace Sistema_de_Salon_de_belleza
                 label1.Visible = false;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

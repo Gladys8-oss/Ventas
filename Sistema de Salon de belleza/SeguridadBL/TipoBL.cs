@@ -22,7 +22,7 @@ namespace BL.Rentas
 
         public BindingList<Tipo> ObtenerTipos()
         {
-            _contexto.Categorias.Load();
+            _contexto.Tipos.Load();
             ListaTipos = _contexto.Tipos.Local.ToBindingList();
 
             return ListaTipos;
