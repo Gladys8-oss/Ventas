@@ -119,7 +119,7 @@ namespace Sistema_de_Salon_de_belleza
             {
                 listaClientesBindingSource.DataSource = _clientes.ObtenerClientes(buscar);
             }
-
+            
             listaClientesBindingSource.ResetBindings(false);
         }
     }

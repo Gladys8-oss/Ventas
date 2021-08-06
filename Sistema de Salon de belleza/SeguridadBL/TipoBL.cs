@@ -22,8 +22,8 @@ namespace BL.Rentas
 
         public BindingList<Tipo> ObtenerTipos()
         {
-            _contexto.Tipos.Load();
-            ListaTipos = _contexto.Tipos.Local.ToBindingList();
+         //   _contexto.Tipos.Load();
+          //  ListaTipos = _contexto.Tipos.Local.ToBindingList();
 
             return ListaTipos;
         }

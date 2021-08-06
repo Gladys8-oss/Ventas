@@ -86,11 +86,7 @@ namespace Sistema_de_Salon_de_belleza
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var factura = (Factura)listaFacturasBindingSource.Current;
-
-            _facturaBL.AgregarFacturaDetalle(factura);
-
-            DeshabilitarHabilitarHabilitarBotones(false);
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -133,16 +129,16 @@ namespace Sistema_de_Salon_de_belleza
 
         private void Anular(int id)
         {
-            var resultado = _facturaBL.AnularFactura(id);
+                var resultado = _facturaBL.AnularFactura(id);
 
-            if (resultado == true)
-            {
-                listaFacturasBindingSource.ResetBindings(false);
-            }
-            else
-            {
-                MessageBox.Show("Ocurrio un error al anular la factura");
-            }
+                if (resultado == true)
+                {
+                    listaFacturasBindingSource.ResetBindings(false);
+                }
+                else
+                {
+                    MessageBox.Show("Ocurrio un error al anular la factura");
+                }
         }
 
         private void listaFacturasBindingSource_CurrentChanged(object sender, EventArgs e)
@@ -163,6 +159,28 @@ namespace Sistema_de_Salon_de_belleza
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+
+            _facturaBL.AgregarFacturaDetalle(factura);
+
+            DeshabilitarHabilitarHabilitarBotones(false);
+        }
+
+        private void facturaDetalleDataGridView_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
+
+        private void facturaDetalleDataGridView_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
+        {
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            _facturaBL.CalcularFactura(factura);
+
+            listaFacturasBindingSource.ResetBindings(false);
         }
     }
 }

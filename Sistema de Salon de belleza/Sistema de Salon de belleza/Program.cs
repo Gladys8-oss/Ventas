@@ -12,7 +12,7 @@ namespace Sistema_de_Salon_de_belleza
 {
     static class Program
     {
-      
+        public static UsuariosDB UsuarioLogueado;
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>

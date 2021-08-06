@@ -111,7 +111,7 @@
             // 
             fotoLabel.AutoSize = true;
             fotoLabel.BackColor = System.Drawing.Color.Transparent;
-            fotoLabel.Location = new System.Drawing.Point(16, 343);
+            fotoLabel.Location = new System.Drawing.Point(16, 347);
             fotoLabel.Name = "fotoLabel";
             fotoLabel.Size = new System.Drawing.Size(31, 13);
             fotoLabel.TabIndex = 126;
@@ -348,7 +348,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(33, 422);
+            this.button1.Location = new System.Drawing.Point(33, 426);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 23);
             this.button1.TabIndex = 16;
@@ -358,7 +358,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(136, 422);
+            this.button2.Location = new System.Drawing.Point(136, 426);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 23);
             this.button2.TabIndex = 17;
@@ -374,7 +374,7 @@
             // fotoPictureBox
             // 
             this.fotoPictureBox.BackColor = System.Drawing.Color.Silver;
-            this.fotoPictureBox.Location = new System.Drawing.Point(53, 329);
+            this.fotoPictureBox.Location = new System.Drawing.Point(53, 333);
             this.fotoPictureBox.Name = "fotoPictureBox";
             this.fotoPictureBox.Size = new System.Drawing.Size(181, 78);
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -569,14 +569,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(591, 36);
+            this.textBox1.Location = new System.Drawing.Point(583, 35);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
+            this.textBox1.Size = new System.Drawing.Size(224, 20);
             this.textBox1.TabIndex = 163;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(752, 34);
+            this.button3.Location = new System.Drawing.Point(813, 32);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 164;

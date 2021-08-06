@@ -72,7 +72,7 @@ namespace BL.Rentas
             return resultado;
         }
 
-        private void CalcularExistencia(Factura factura) // 
+        private void CalcularExistencia(Factura factura)  
         {
             foreach (var detalle in factura.FacturaDetalle)
             {
@@ -217,4 +217,5 @@ namespace BL.Rentas
             Cantidad = 1;
         }
     }
+
 }

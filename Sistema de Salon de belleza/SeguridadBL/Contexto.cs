@@ -13,7 +13,7 @@ namespace BL.Rentas
 {
     public class Contexto: DbContext
     {
-        public Contexto(): base("MiBaseDeDatos")
+        public Contexto(): base("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=MiBaseDeDatos;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
         {
            
         }
@@ -28,7 +28,7 @@ namespace BL.Rentas
         public DbSet <Citas> Citas { get; set; }
         public DbSet <Categoria> Categorias { get; set; }
         public DbSet<Tipo> Tipos { get; set; }
-        public DbSet <UsuariosDB> Usuarios { get; set; }   
+        public DbSet <UsuariosDB> Usuarios { get; set;  } 
         public DbSet <EmpleadosBL.Empleados> Empleados { get; set; }
         public DbSet<Factura> Facturas { get; set;  }
     }

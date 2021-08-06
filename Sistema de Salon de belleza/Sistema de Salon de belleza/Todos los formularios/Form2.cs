@@ -23,8 +23,58 @@ namespace Sistema_de_Salon_de_belleza
             var form1 = new Form1();
             form1.ShowDialog();
 
+            if (Program.UsuarioLogueado != null)
+            {
+                toolStripStatusLabel1.Text = "Usuario: " 
+                    + Program.UsuarioLogueado.Nombre;
 
-            toolStripStatusLabel1.Text = "Usuariog: " + Utilidades.NombreUsuario;
+                if (Program.UsuarioLogueado.TipoUsuario == "Usuario Caja")
+                {
+                    reportesDeProductosToolStripMenuItem.Visible = true;
+                    seguridadToolStripMenuItem1.Enabled = false;
+                    transaccionesToolStripMenuItem1.Enabled = false;
+                    empleadosToolStripMenuItem1.Enabled = false;
+                    ventasToolStripMenuItem3.Enabled = false;
+                    agendaToolStripMenuItem.Enabled = true;
+                    button1.Enabled = false;
+                    button5.Enabled = true;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+                }
+                else if (Program.UsuarioLogueado.TipoUsuario == "Administradores")
+                {
+                    reportesDeProductosToolStripMenuItem.Enabled = true;
+                    seguridadToolStripMenuItem1.Enabled = true;
+                    transaccionesToolStripMenuItem1.Enabled = true;
+                    empleadosToolStripMenuItem1.Enabled = true;
+                    ventasToolStripMenuItem3.Enabled = true;
+                    agendaToolStripMenuItem.Enabled = true;
+                    button1.Enabled = true;
+                    button5.Enabled = true;
+                    button2.Enabled = true;
+                    button3.Enabled = true;
+                    button4.Enabled = true;
+                }
+                else if (Program.UsuarioLogueado.TipoUsuario == "Usuarios Vendedores")
+                {
+                    reportesDeProductosToolStripMenuItem.Enabled = false;
+                    seguridadToolStripMenuItem1.Enabled = false;
+                    transaccionesToolStripMenuItem1.Enabled = false;
+                    empleadosToolStripMenuItem1.Enabled = false;
+                    ventasToolStripMenuItem3.Enabled = false;
+                    agendaToolStripMenuItem.Enabled = true;
+                    button1.Enabled = true; 
+                    button5.Enabled = false;
+                    button2.Enabled = true;
+                    button3.Enabled = true;
+                    button4.Enabled = true;
+                }
+            } else
+            {
+                Application.Exit();
+            }
+            
                   
         }
         
@@ -67,10 +117,12 @@ namespace Sistema_de_Salon_de_belleza
 
         private void button5_Click(object sender, EventArgs e)
         {
-          //  var form4 = new Todos_los_formularios.Reportes();
-           // form4.ShowDialog();
+            var form11fac = new Form11fac();
+            //form1Factura.MdiParent = this;
+            form11fac.ShowDialog();
         }
 
+     
         private void button3_Click(object sender, EventArgs e)
         {
             var form5Proveedores = new Form5Proveedores();
@@ -102,9 +154,67 @@ namespace Sistema_de_Salon_de_belleza
 
         private void facturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var form11fac = new Form11fac();
-          //  form10Factura.MdiParent = this;
-             form11fac.ShowDialog();
+            
+        }
+
+        private void empleadosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var for7empleados = new Form7Empleados();
+            for7empleados.ShowDialog();
+        }
+
+        private void reportesDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteproductos = new FormReportedeProductos();
+            formReporteproductos.ShowDialog();
+        }
+
+        private void reporteDeCitasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            var formReportecitas = new FormReporte_de_Citas();
+            formReportecitas.ShowDialog();
+        }
+
+        private void reportesDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteclientes = new FormReportedeClientes();
+            formReporteclientes.ShowDialog();
+        }
+
+        private void reporteDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteproveedores = new FormReportedeProveedores();
+            formReporteproveedores.ShowDialog();
+        }
+
+        private void ventasToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            var formReporteventas = new FormReportedeVentas();
+                formReporteventas.ShowDialog();
+        }
+
+        private void agregarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formusuarios = new FormUsuarios();
+            //form1Factura.MdiParent = this;
+            formusuarios.ShowDialog();
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            var formacerca = new FormAyuda();
+            formacerca.ShowDialog();
+        }
+
+        private void manualDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var manualusuario = new FormanualUsuario();
+            manualusuario.ShowDialog();
         }
     }
 }

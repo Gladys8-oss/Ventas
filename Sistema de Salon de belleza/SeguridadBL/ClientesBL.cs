@@ -5,7 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static BL.Rentas.CitasBL;
+//using static BL.Rentas.CitasBL;
 
 namespace BL.Rentas
 {
@@ -39,7 +39,7 @@ namespace BL.Rentas
             var resultado = new BindingList<Cliente>(query);
 
             return resultado;
-        }
+       }
 
         public Resultado GuardarCliente(Cliente cliente)
         {
@@ -73,10 +73,10 @@ namespace BL.Rentas
             }
             return false;
         }
-    /*    public static implicit operator ClientesBL(Cliente v)
+        public static implicit operator ClientesBL(Cliente v)
         {
             throw new NotImplementedException();
-        }*/
+        }
 
             public void CancelarCambios()
         {
@@ -125,10 +125,7 @@ namespace BL.Rentas
         public string Telefono { get; set; }
         public string Correo { get; set; }
         public bool activo { get; set; }
- //       public int ClienteId { get; set; }
+        public int ClienteId { get; set; }
         
     }
-
-
-
 }

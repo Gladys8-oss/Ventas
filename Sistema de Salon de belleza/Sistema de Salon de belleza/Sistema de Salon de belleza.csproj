@@ -12,6 +12,22 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>C:\Users\Gladys\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +48,23 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>974B7C7CDC48C2E3A11F05E11A322D93FBA7557A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Sistema de Salon de belleza_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -41,6 +73,7 @@
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
       <Private>True</Private>
@@ -52,6 +85,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,13 +98,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSet1.cs">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSet1.Designer.cs">
+    <Compile Include="DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCitas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCitas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteClientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteClientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteProductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteProveedores.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteProveedores.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteVentas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteVentas.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Todos los formularios\Form11fac.cs">
       <SubType>Form</SubType>
@@ -133,7 +195,74 @@
     <Compile Include="Todos los formularios\Form9Calendario.Designer.cs">
       <DependentUpon>Form9Calendario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilidades.cs" />
+    <Compile Include="Todos los formularios\FormanualUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormanualUsuario.Designer.cs">
+      <DependentUpon>FormanualUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\FormAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormAyuda.Designer.cs">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReporte de Citas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReporte de Citas.Designer.cs">
+      <DependentUpon>FormReporte de Citas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeClientes.Designer.cs">
+      <DependentUpon>FormReportedeClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeProductos.Designer.cs">
+      <DependentUpon>FormReportedeProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeProveedores.Designer.cs">
+      <DependentUpon>FormReportedeProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormReportedeVentas.Designer.cs">
+      <DependentUpon>FormReportedeVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Todos los formularios\FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Todos los formularios\FormUsuarios.Designer.cs">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ReporteCitas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCitas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteClientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteClientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteProveedores.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteProveedores.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteVentas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteVentas.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Todos los formularios\Form11fac.resx">
       <DependentUpon>Form11fac.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,16 +303,40 @@
     <EmbeddedResource Include="Todos los formularios\Form9Calendario.resx">
       <DependentUpon>Form9Calendario.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <EmbeddedResource Include="Todos los formularios\FormanualUsuario.resx">
+      <DependentUpon>FormanualUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\FormAyuda.resx">
+      <DependentUpon>FormAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\FormReporte de Citas.resx">
+      <DependentUpon>FormReporte de Citas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\FormReportedeClientes.resx">
+      <DependentUpon>FormReportedeClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\FormReportedeProductos.resx">
+      <DependentUpon>FormReportedeProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\FormReportedeProveedores.resx">
+      <DependentUpon>FormReportedeProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\FormReportedeVentas.resx">
+      <DependentUpon>FormReportedeVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todos los formularios\FormUsuarios.resx">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
-    <None Include="DataSet1.xsd">
+    <None Include="DataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BL.Rentas.Categoria.datasource" />
@@ -706,6 +859,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Sistema de Salon de belleza_ClaveTemporal.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -720,6 +874,40 @@
       <Project>{ea28fa95-27a9-46df-b8af-943cc769683e}</Project>
       <Name>BL.Rentas</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

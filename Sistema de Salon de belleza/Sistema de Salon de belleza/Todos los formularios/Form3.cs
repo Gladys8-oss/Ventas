@@ -126,7 +126,7 @@ namespace Sistema_de_Salon_de_belleza.Todos_los_formularios
 
         private void seguridadBlBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
-            //DeshabilitarHabilitarHabilitarBotones(true);
+           DeshabilitarHabilitarHabilitarBotones(true);
 
         }
 

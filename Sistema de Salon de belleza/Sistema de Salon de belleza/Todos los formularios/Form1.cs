@@ -62,7 +62,7 @@ namespace Sistema_de_Salon_de_belleza
 
             if (usuarioDB != null)
             {
-                Utilidades.NombreUsuario = usuarioDB.Nombre;
+                Program.UsuarioLogueado = usuarioDB;
                 this.Close();
             }else
             {

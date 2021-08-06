@@ -519,7 +519,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn activoDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clienteIdDataGridViewTextBoxColumn;
+      //  private System.Windows.Forms.DataGridViewTextBoxColumn clienteIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.CheckBox activoCheckBox;
         private System.Windows.Forms.TextBox apellidoTextBox;
         private System.Windows.Forms.TextBox correoTextBox;

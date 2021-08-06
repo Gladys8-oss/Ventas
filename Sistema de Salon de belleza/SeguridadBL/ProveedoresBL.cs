@@ -101,6 +101,4 @@ namespace BL.Rentas
         public string Pais { get; set; }
         public bool Activo { get; set; }
     }
-
-    
 }

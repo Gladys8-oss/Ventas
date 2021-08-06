@@ -10,7 +10,7 @@ namespace BL.Rentas
 {
    public class EmpleadosBL
     {
-       // empleadosBL_EmpleadosBindingSource
+           
            Contexto _contexto;
           public BindingList<Empleados> ListaEmpleados { get; set; }
         public EmpleadosBL()
@@ -22,7 +22,7 @@ namespace BL.Rentas
         public BindingList<Empleados> ObtenerEmpleados()
         {
             _contexto.Empleados.Load();
-            ListaEmpleados = _contexto.Empleados.Local.ToBindingList();
+           ListaEmpleados = _contexto.Empleados.Local.ToBindingList();
 
             return ListaEmpleados;
         }
@@ -47,7 +47,7 @@ namespace BL.Rentas
             ListaEmpleados.Add(nuevoEmpleado);
         }
 
-
+    
         private Resultado Validar(Empleados empleados) 
         {
             var resultado = new Resultado();

@@ -62,15 +62,15 @@
             this.listaProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.clienteIdComboBox = new System.Windows.Forms.ComboBox();
             this.facturaDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.facturaDetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             activoLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
@@ -190,7 +190,7 @@
             this.listaFacturasBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaFacturasBindingNavigator.Name = "listaFacturasBindingNavigator";
             this.listaFacturasBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(711, 25);
+            this.listaFacturasBindingNavigator.Size = new System.Drawing.Size(713, 25);
             this.listaFacturasBindingNavigator.TabIndex = 0;
             this.listaFacturasBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -386,6 +386,34 @@
             this.facturaDetalleBindingSource.DataMember = "FacturaDetalle";
             this.facturaDetalleBindingSource.DataSource = this.listaFacturasBindingSource;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(625, 86);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 43);
+            this.button2.TabIndex = 17;
+            this.toolTip1.SetToolTip(this.button2, "Eliminar Producto");
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(541, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 24);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "ANULADO";
+            this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // facturaDetalleDataGridView
             // 
             this.facturaDetalleDataGridView.AutoGenerateColumns = false;
@@ -396,12 +424,12 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
-            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(12, 150);
+            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(23, 148);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
-            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(697, 220);
-            this.facturaDetalleDataGridView.TabIndex = 15;
-            this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit);
-            this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError);
+            this.facturaDetalleDataGridView.Size = new System.Drawing.Size(678, 220);
+            this.facturaDetalleDataGridView.TabIndex = 18;
+            this.facturaDetalleDataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.facturaDetalleDataGridView_CellEndEdit_1);
+            this.facturaDetalleDataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.facturaDetalleDataGridView_DataError_1);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -435,56 +463,24 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(524, 86);
+            this.button1.Location = new System.Drawing.Point(522, 86);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 43);
-            this.button1.TabIndex = 16;
-            this.toolTip1.SetToolTip(this.button1, "Agregar Producto");
+            this.button1.Size = new System.Drawing.Size(77, 43);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(613, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 43);
-            this.button2.TabIndex = 17;
-            this.toolTip1.SetToolTip(this.button2, "Eliminar Producto");
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(541, 47);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 24);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "ANULADO";
-            this.label1.Visible = false;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Form11fac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(711, 459);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(713, 468);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.facturaDetalleDataGridView);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(clienteIdLabel1);
             this.Controls.Add(this.clienteIdComboBox);
             this.Controls.Add(activoLabel);
@@ -546,14 +542,14 @@
         private System.Windows.Forms.BindingSource listaProductosBindingSource;
         private System.Windows.Forms.ComboBox clienteIdComboBox;
         private System.Windows.Forms.BindingSource facturaDetalleBindingSource;
-        private System.Windows.Forms.DataGridView facturaDetalleDataGridView;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.DataGridView facturaDetalleDataGridView;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button button1;
     }
 }

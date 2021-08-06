@@ -19,7 +19,7 @@ namespace Sistema_de_Salon_de_belleza
         public Form6Citas()
         {
             InitializeComponent();
-            _citas = new CitasBL();
+           _citas = new CitasBL();
             _empleados = new EmpleadosBL();
             listaCitasBindingSource.DataSource = _citas.ObtenerCitas();
             listaEmpleadosBindingSource.DataSource = _empleados.ObtenerEmpleados();
