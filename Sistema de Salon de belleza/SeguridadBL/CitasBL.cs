@@ -35,6 +35,17 @@ namespace BL.Rentas
             return ListaCitas;
         }
 
+        public BindingList<Citas> ObtenerCitas(string buscar)
+        {
+            var query = _contexto.Citas
+            .Where(p => p.Fecha_Cita.ToLower()
+            .Contains(buscar.ToLower()) == true)
+            .ToList();
+
+            var resultado = new BindingList<Citas>(query);
+
+            return resultado;
+        }
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())

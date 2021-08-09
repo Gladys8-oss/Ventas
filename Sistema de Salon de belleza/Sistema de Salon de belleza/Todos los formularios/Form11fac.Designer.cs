@@ -91,9 +91,10 @@
             // 
             activoLabel.AutoSize = true;
             activoLabel.BackColor = System.Drawing.Color.Transparent;
-            activoLabel.Location = new System.Drawing.Point(200, 52);
+            activoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            activoLabel.Location = new System.Drawing.Point(200, 41);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.Size = new System.Drawing.Size(56, 20);
             activoLabel.TabIndex = 1;
             activoLabel.Text = "Activo:";
             // 
@@ -101,9 +102,10 @@
             // 
             fechaLabel.AutoSize = true;
             fechaLabel.BackColor = System.Drawing.Color.Transparent;
-            fechaLabel.Location = new System.Drawing.Point(20, 113);
+            fechaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaLabel.Location = new System.Drawing.Point(15, 116);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(40, 13);
+            fechaLabel.Size = new System.Drawing.Size(58, 20);
             fechaLabel.TabIndex = 5;
             fechaLabel.Text = "Fecha:";
             // 
@@ -111,9 +113,10 @@
             // 
             idLabel.AutoSize = true;
             idLabel.BackColor = System.Drawing.Color.Transparent;
-            idLabel.Location = new System.Drawing.Point(20, 52);
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(20, 41);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(27, 20);
             idLabel.TabIndex = 7;
             idLabel.Text = "Id:";
             // 
@@ -121,9 +124,10 @@
             // 
             impuestoLabel.AutoSize = true;
             impuestoLabel.BackColor = System.Drawing.Color.Transparent;
-            impuestoLabel.Location = new System.Drawing.Point(444, 379);
+            impuestoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            impuestoLabel.Location = new System.Drawing.Point(417, 380);
             impuestoLabel.Name = "impuestoLabel";
-            impuestoLabel.Size = new System.Drawing.Size(53, 13);
+            impuestoLabel.Size = new System.Drawing.Size(80, 20);
             impuestoLabel.TabIndex = 9;
             impuestoLabel.Text = "Impuesto:";
             // 
@@ -131,9 +135,10 @@
             // 
             subtotalLabel.AutoSize = true;
             subtotalLabel.BackColor = System.Drawing.Color.Transparent;
-            subtotalLabel.Location = new System.Drawing.Point(444, 405);
+            subtotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            subtotalLabel.Location = new System.Drawing.Point(418, 410);
             subtotalLabel.Name = "subtotalLabel";
-            subtotalLabel.Size = new System.Drawing.Size(49, 13);
+            subtotalLabel.Size = new System.Drawing.Size(73, 20);
             subtotalLabel.TabIndex = 11;
             subtotalLabel.Text = "Subtotal:";
             // 
@@ -141,9 +146,10 @@
             // 
             totalLabel.AutoSize = true;
             totalLabel.BackColor = System.Drawing.Color.Transparent;
-            totalLabel.Location = new System.Drawing.Point(444, 431);
+            totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            totalLabel.Location = new System.Drawing.Point(427, 441);
             totalLabel.Name = "totalLabel";
-            totalLabel.Size = new System.Drawing.Size(34, 13);
+            totalLabel.Size = new System.Drawing.Size(48, 20);
             totalLabel.TabIndex = 13;
             totalLabel.Text = "Total:";
             // 
@@ -151,9 +157,10 @@
             // 
             clienteIdLabel1.AutoSize = true;
             clienteIdLabel1.BackColor = System.Drawing.Color.Transparent;
-            clienteIdLabel1.Location = new System.Drawing.Point(20, 86);
+            clienteIdLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            clienteIdLabel1.Location = new System.Drawing.Point(14, 76);
             clienteIdLabel1.Name = "clienteIdLabel1";
-            clienteIdLabel1.Size = new System.Drawing.Size(42, 13);
+            clienteIdLabel1.Size = new System.Drawing.Size(62, 20);
             clienteIdLabel1.TabIndex = 14;
             clienteIdLabel1.Text = "Cliente ";
             // 
@@ -306,7 +313,8 @@
             this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
             this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaFacturasBindingSource, "Activo", true));
             this.activoCheckBox.Enabled = false;
-            this.activoCheckBox.Location = new System.Drawing.Point(260, 47);
+            this.activoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activoCheckBox.Location = new System.Drawing.Point(260, 39);
             this.activoCheckBox.Name = "activoCheckBox";
             this.activoCheckBox.Size = new System.Drawing.Size(158, 24);
             this.activoCheckBox.TabIndex = 2;
@@ -315,47 +323,52 @@
             // fechaDateTimePicker
             // 
             this.fechaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaFacturasBindingSource, "Fecha", true));
-            this.fechaDateTimePicker.Location = new System.Drawing.Point(80, 109);
+            this.fechaDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fechaDateTimePicker.Location = new System.Drawing.Point(78, 112);
             this.fechaDateTimePicker.Name = "fechaDateTimePicker";
-            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.fechaDateTimePicker.Size = new System.Drawing.Size(200, 26);
             this.fechaDateTimePicker.TabIndex = 6;
             // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Id", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "00000"));
-            this.idTextBox.Location = new System.Drawing.Point(80, 49);
+            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(80, 38);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.ReadOnly = true;
-            this.idTextBox.Size = new System.Drawing.Size(86, 20);
+            this.idTextBox.Size = new System.Drawing.Size(86, 26);
             this.idTextBox.TabIndex = 8;
             // 
             // impuestoTextBox
             // 
             this.impuestoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Impuesto", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
+            this.impuestoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.impuestoTextBox.Location = new System.Drawing.Point(504, 376);
             this.impuestoTextBox.Name = "impuestoTextBox";
             this.impuestoTextBox.ReadOnly = true;
-            this.impuestoTextBox.Size = new System.Drawing.Size(200, 20);
+            this.impuestoTextBox.Size = new System.Drawing.Size(200, 26);
             this.impuestoTextBox.TabIndex = 10;
             this.impuestoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // subtotalTextBox
             // 
             this.subtotalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Subtotal", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.subtotalTextBox.Location = new System.Drawing.Point(504, 402);
+            this.subtotalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subtotalTextBox.Location = new System.Drawing.Point(504, 407);
             this.subtotalTextBox.Name = "subtotalTextBox";
             this.subtotalTextBox.ReadOnly = true;
-            this.subtotalTextBox.Size = new System.Drawing.Size(200, 20);
+            this.subtotalTextBox.Size = new System.Drawing.Size(200, 26);
             this.subtotalTextBox.TabIndex = 12;
             this.subtotalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // totalTextBox
             // 
             this.totalTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaFacturasBindingSource, "Total", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
-            this.totalTextBox.Location = new System.Drawing.Point(504, 428);
+            this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextBox.Location = new System.Drawing.Point(504, 439);
             this.totalTextBox.Name = "totalTextBox";
             this.totalTextBox.ReadOnly = true;
-            this.totalTextBox.Size = new System.Drawing.Size(200, 20);
+            this.totalTextBox.Size = new System.Drawing.Size(200, 26);
             this.totalTextBox.TabIndex = 14;
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -373,10 +386,11 @@
             this.clienteIdComboBox.DataSource = this.listaClientesBindingSource;
             this.clienteIdComboBox.DisplayMember = "Nombre";
             this.clienteIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.clienteIdComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(80, 83);
+            this.clienteIdComboBox.Location = new System.Drawing.Point(78, 73);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
-            this.clienteIdComboBox.Size = new System.Drawing.Size(200, 21);
+            this.clienteIdComboBox.Size = new System.Drawing.Size(200, 28);
             this.clienteIdComboBox.TabIndex = 15;
             this.clienteIdComboBox.ValueMember = "Id";
             // 
@@ -424,7 +438,7 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.facturaDetalleDataGridView.DataSource = this.facturaDetalleBindingSource;
-            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(23, 148);
+            this.facturaDetalleDataGridView.Location = new System.Drawing.Point(23, 154);
             this.facturaDetalleDataGridView.Name = "facturaDetalleDataGridView";
             this.facturaDetalleDataGridView.Size = new System.Drawing.Size(678, 220);
             this.facturaDetalleDataGridView.TabIndex = 18;
@@ -463,11 +477,12 @@
             // 
             // button1
             // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(522, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 43);
             this.button1.TabIndex = 19;
-            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 

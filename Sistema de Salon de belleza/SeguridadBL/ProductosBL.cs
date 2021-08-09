@@ -15,15 +15,19 @@ namespace BL.Rentas
         Contexto _contexto;
         public BindingList<Producto> ListaProductos { get; set;  }
 
-        TipoBL _tipoBL;
-        public BindingList<Tipo> ListaTipos { get; set;  }
+        
+        CategoriaBL _categoriaBL;
+        public BindingList<Categoria> ListaCategoria { get; set; } 
+
         public ProductosBL()
         {
             _contexto = new Contexto();
              ListaProductos = new BindingList<Producto>();
 
-            _tipoBL = new TipoBL();
-            ListaTipos = new BindingList<Tipo>();
+           
+            _categoriaBL = new CategoriaBL();
+            ListaCategoria = new BindingList<Categoria>();
+
         }
         public BindingList<Producto> ObtenerProductos()
         {
@@ -127,12 +131,7 @@ namespace BL.Rentas
                 resultado.Exitoso = false;
 
             }
-
-            if (producto.TipoId == 0)
-            {
-                resultado.Mensaje = "Seleccione un Tipo";
-                resultado.Exitoso = false;
-            }
+            
             return resultado;
         }
     }
@@ -145,8 +144,6 @@ public class Producto
         public int Existencia { get; set; }
         public bool Activo { get; set; }
         public byte[] Foto { get; set; }
-        public int TipoId { get; set; }
-        public Tipo Tipo { get; set; }
         public int CategoriaId { get; set; } 
         public Categoria Categoria { get; set; }
     }

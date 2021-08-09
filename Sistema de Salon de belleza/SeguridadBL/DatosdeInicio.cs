@@ -15,16 +15,7 @@ namespace BL.Rentas
     {
         protected override void Seed(Contexto contexto) 
         {
-            var tipo1 = new Tipo();
-            tipo1.Id = 002;
-            tipo1.Descripcion = "Planchado";
-            contexto.Tipos.Add(tipo1);
-
-            var tipo2 = new Tipo();
-            tipo2.Id = 001;
-            tipo2.Descripcion = "Champu";
-            contexto.Tipos.Add(tipo2);
-
+           
             var usuarioAdmin1 = new UsuariosDB();
             usuarioAdmin1.Nombre = "gladys";
             usuarioAdmin1.Contrasena = "gladys15";
@@ -119,7 +110,6 @@ namespace BL.Rentas
             producto1.Foto = null;
             producto1.Marca = "KeratineSb";
             producto1.Precio = 560;
-            producto1.TipoId = 001;
             producto1.CategoriaId = 001;
             contexto.Productos.Add(producto1);
 
@@ -131,7 +121,6 @@ namespace BL.Rentas
             producto2.Foto = null;
             producto2.Marca = "Ninguna";
             producto2.Precio = 560;
-            producto2.TipoId = 002;
             producto2.CategoriaId = 001;
             contexto.Productos.Add(producto2);
 

@@ -78,6 +78,9 @@
             this.button43 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.listaCitasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label18 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.listaCitasBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -287,6 +290,7 @@
             this.button11.TabIndex = 20;
             this.button11.Text = "9";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -466,6 +470,7 @@
             this.button35.TabIndex = 43;
             this.button35.Text = "14";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -533,8 +538,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Control;
+            this.label9.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.listaCitasBindingSource, "Fecha_Cita", true));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(50, 217);
+            this.label9.Location = new System.Drawing.Point(53, 273);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(45, 13);
             this.label9.TabIndex = 52;
@@ -545,11 +551,43 @@
             // 
             this.listaCitasBindingSource.DataSource = typeof(BL.Rentas.CitasBL.Citas);
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.Control;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(199, 274);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(45, 13);
+            this.label18.TabIndex = 61;
+            this.label18.Text = "Ver mas";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // label40
+            // 
+            this.label40.BackColor = System.Drawing.Color.Red;
+            this.label40.Location = new System.Drawing.Point(114, 240);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(28, 26);
+            this.label40.TabIndex = 83;
+            // 
+            // label41
+            // 
+            this.label41.BackColor = System.Drawing.Color.DarkCyan;
+            this.label41.Location = new System.Drawing.Point(258, 240);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(28, 26);
+            this.label41.TabIndex = 84;
+            this.label41.Click += new System.EventHandler(this.label41_Click);
+            // 
             // Form9Calendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 479);
+            this.ClientSize = new System.Drawing.Size(1045, 485);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button39);
             this.Controls.Add(this.button40);
@@ -653,5 +691,8 @@
         private System.Windows.Forms.Button button43;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.BindingSource listaCitasBindingSource;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
     }
 }

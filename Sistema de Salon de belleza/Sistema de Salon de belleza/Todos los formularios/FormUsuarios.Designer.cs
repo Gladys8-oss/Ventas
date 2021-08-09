@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label fotoLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             System.Windows.Forms.Label contrasenaLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label tipoUsuarioLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUsuarios));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.listaUsuariosBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
@@ -69,9 +69,60 @@
             this.listaUsuariosBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
-            // openFileDialog1
+            // fotoLabel
             // 
-            this.openFileDialog1.Filter = "jpg, png |*.jpg; *.png";
+            fotoLabel.AutoSize = true;
+            fotoLabel.BackColor = System.Drawing.Color.Transparent;
+            fotoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fotoLabel.Location = new System.Drawing.Point(434, 57);
+            fotoLabel.Name = "fotoLabel";
+            fotoLabel.Size = new System.Drawing.Size(46, 20);
+            fotoLabel.TabIndex = 10;
+            fotoLabel.Text = "Foto:";
+            // 
+            // contrasenaLabel
+            // 
+            contrasenaLabel.AutoSize = true;
+            contrasenaLabel.BackColor = System.Drawing.Color.Transparent;
+            contrasenaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            contrasenaLabel.Location = new System.Drawing.Point(31, 152);
+            contrasenaLabel.Name = "contrasenaLabel";
+            contrasenaLabel.Size = new System.Drawing.Size(96, 20);
+            contrasenaLabel.TabIndex = 14;
+            contrasenaLabel.Text = "Contrasena:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.BackColor = System.Drawing.Color.Transparent;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(31, 58);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(27, 20);
+            idLabel.TabIndex = 18;
+            idLabel.Text = "Id:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.BackColor = System.Drawing.Color.Transparent;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(31, 107);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(69, 20);
+            nombreLabel.TabIndex = 20;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // tipoUsuarioLabel
+            // 
+            tipoUsuarioLabel.AutoSize = true;
+            tipoUsuarioLabel.BackColor = System.Drawing.Color.Transparent;
+            tipoUsuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tipoUsuarioLabel.Location = new System.Drawing.Point(31, 197);
+            tipoUsuarioLabel.Name = "tipoUsuarioLabel";
+            tipoUsuarioLabel.Size = new System.Drawing.Size(102, 20);
+            tipoUsuarioLabel.TabIndex = 22;
+            tipoUsuarioLabel.Text = "Tipo Usuario:";
             // 
             // listaUsuariosBindingSource1
             // 
@@ -107,17 +158,6 @@
             this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.fotoPictureBox.TabIndex = 11;
             this.fotoPictureBox.TabStop = false;
-            // 
-            // fotoLabel
-            // 
-            fotoLabel.AutoSize = true;
-            fotoLabel.BackColor = System.Drawing.Color.Transparent;
-            fotoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            fotoLabel.Location = new System.Drawing.Point(434, 57);
-            fotoLabel.Name = "fotoLabel";
-            fotoLabel.Size = new System.Drawing.Size(46, 20);
-            fotoLabel.TabIndex = 10;
-            fotoLabel.Text = "Foto:";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -259,17 +299,6 @@
             this.listaUsuariosBindingNavigator.Text = "bindingNavigator1";
             this.listaUsuariosBindingNavigator.RefreshItems += new System.EventHandler(this.seguridadBl_UsuariosDBBindingNavigator_RefreshItems);
             // 
-            // contrasenaLabel
-            // 
-            contrasenaLabel.AutoSize = true;
-            contrasenaLabel.BackColor = System.Drawing.Color.Transparent;
-            contrasenaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            contrasenaLabel.Location = new System.Drawing.Point(31, 152);
-            contrasenaLabel.Name = "contrasenaLabel";
-            contrasenaLabel.Size = new System.Drawing.Size(96, 20);
-            contrasenaLabel.TabIndex = 14;
-            contrasenaLabel.Text = "Contrasena:";
-            // 
             // contrasenaTextBox
             // 
             this.contrasenaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaUsuariosBindingSource1, "Contrasena", true));
@@ -278,17 +307,6 @@
             this.contrasenaTextBox.Name = "contrasenaTextBox";
             this.contrasenaTextBox.Size = new System.Drawing.Size(258, 26);
             this.contrasenaTextBox.TabIndex = 15;
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.BackColor = System.Drawing.Color.Transparent;
-            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            idLabel.Location = new System.Drawing.Point(31, 58);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(27, 20);
-            idLabel.TabIndex = 18;
-            idLabel.Text = "Id:";
             // 
             // idTextBox
             // 
@@ -300,17 +318,6 @@
             this.idTextBox.Size = new System.Drawing.Size(258, 26);
             this.idTextBox.TabIndex = 19;
             // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.BackColor = System.Drawing.Color.Transparent;
-            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            nombreLabel.Location = new System.Drawing.Point(31, 107);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(69, 20);
-            nombreLabel.TabIndex = 20;
-            nombreLabel.Text = "Nombre:";
-            // 
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaUsuariosBindingSource1, "Nombre", true));
@@ -319,17 +326,6 @@
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(258, 26);
             this.nombreTextBox.TabIndex = 21;
-            // 
-            // tipoUsuarioLabel
-            // 
-            tipoUsuarioLabel.AutoSize = true;
-            tipoUsuarioLabel.BackColor = System.Drawing.Color.Transparent;
-            tipoUsuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tipoUsuarioLabel.Location = new System.Drawing.Point(31, 197);
-            tipoUsuarioLabel.Name = "tipoUsuarioLabel";
-            tipoUsuarioLabel.Size = new System.Drawing.Size(102, 20);
-            tipoUsuarioLabel.TabIndex = 22;
-            tipoUsuarioLabel.Text = "Tipo Usuario:";
             // 
             // tipoUsuarioComboBox
             // 
@@ -365,6 +361,7 @@
             this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(this.listaUsuariosBindingNavigator);
             this.Name = "FormUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.listaUsuariosBindingSource1)).EndInit();

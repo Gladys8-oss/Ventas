@@ -51,16 +51,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.empleadosBL_EmpleadosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.listaEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listaEmpleadosDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.apellidoTextBox = new System.Windows.Forms.TextBox();
             this.correoTextBox = new System.Windows.Forms.TextBox();
@@ -69,6 +59,16 @@
             this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.telefonoTextBox = new System.Windows.Forms.TextBox();
             this.fecha_de_IngresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.listaEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaEmpleadosDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             activoLabel = new System.Windows.Forms.Label();
             apellidoLabel = new System.Windows.Forms.Label();
             correoLabel = new System.Windows.Forms.Label();
@@ -86,78 +86,95 @@
             // activoLabel
             // 
             activoLabel.AutoSize = true;
-            activoLabel.Location = new System.Drawing.Point(29, 78);
+            activoLabel.BackColor = System.Drawing.Color.Transparent;
+            activoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            activoLabel.Location = new System.Drawing.Point(438, 320);
             activoLabel.Name = "activoLabel";
-            activoLabel.Size = new System.Drawing.Size(40, 13);
+            activoLabel.Size = new System.Drawing.Size(56, 20);
             activoLabel.TabIndex = 17;
             activoLabel.Text = "Activo:";
             // 
             // apellidoLabel
             // 
             apellidoLabel.AutoSize = true;
-            apellidoLabel.Location = new System.Drawing.Point(29, 106);
+            apellidoLabel.BackColor = System.Drawing.Color.Transparent;
+            apellidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            apellidoLabel.Location = new System.Drawing.Point(441, 68);
             apellidoLabel.Name = "apellidoLabel";
-            apellidoLabel.Size = new System.Drawing.Size(47, 13);
+            apellidoLabel.Size = new System.Drawing.Size(69, 20);
             apellidoLabel.TabIndex = 19;
             apellidoLabel.Text = "Apellido:";
             // 
             // correoLabel
             // 
             correoLabel.AutoSize = true;
-            correoLabel.Location = new System.Drawing.Point(29, 132);
+            correoLabel.BackColor = System.Drawing.Color.Transparent;
+            correoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            correoLabel.Location = new System.Drawing.Point(436, 173);
             correoLabel.Name = "correoLabel";
-            correoLabel.Size = new System.Drawing.Size(41, 13);
+            correoLabel.Size = new System.Drawing.Size(61, 20);
             correoLabel.TabIndex = 21;
             correoLabel.Text = "Correo:";
             // 
             // direccionLabel
             // 
             direccionLabel.AutoSize = true;
-            direccionLabel.Location = new System.Drawing.Point(29, 158);
+            direccionLabel.BackColor = System.Drawing.Color.Transparent;
+            direccionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            direccionLabel.Location = new System.Drawing.Point(436, 212);
             direccionLabel.Name = "direccionLabel";
-            direccionLabel.Size = new System.Drawing.Size(55, 13);
+            direccionLabel.Size = new System.Drawing.Size(79, 20);
             direccionLabel.TabIndex = 23;
             direccionLabel.Text = "Direccion:";
             // 
             // idLabel
             // 
             idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(29, 210);
+            idLabel.BackColor = System.Drawing.Color.Transparent;
+            idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            idLabel.Location = new System.Drawing.Point(14, 70);
             idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(19, 13);
+            idLabel.Size = new System.Drawing.Size(27, 20);
             idLabel.TabIndex = 27;
             idLabel.Text = "Id:";
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(29, 236);
+            nombreLabel.BackColor = System.Drawing.Color.Transparent;
+            nombreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreLabel.Location = new System.Drawing.Point(182, 66);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.Size = new System.Drawing.Size(69, 20);
             nombreLabel.TabIndex = 29;
             nombreLabel.Text = "Nombre:";
             // 
             // telefonoLabel
             // 
             telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(29, 262);
+            telefonoLabel.BackColor = System.Drawing.Color.Transparent;
+            telefonoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            telefonoLabel.Location = new System.Drawing.Point(436, 128);
             telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(52, 13);
+            telefonoLabel.Size = new System.Drawing.Size(75, 20);
             telefonoLabel.TabIndex = 31;
             telefonoLabel.Text = "Telefono:";
             // 
             // fecha_de_IngresoLabel1
             // 
             fecha_de_IngresoLabel1.AutoSize = true;
-            fecha_de_IngresoLabel1.Location = new System.Drawing.Point(29, 184);
+            fecha_de_IngresoLabel1.BackColor = System.Drawing.Color.Transparent;
+            fecha_de_IngresoLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fecha_de_IngresoLabel1.Location = new System.Drawing.Point(436, 255);
             fecha_de_IngresoLabel1.Name = "fecha_de_IngresoLabel1";
-            fecha_de_IngresoLabel1.Size = new System.Drawing.Size(93, 13);
+            fecha_de_IngresoLabel1.Size = new System.Drawing.Size(67, 20);
             fecha_de_IngresoLabel1.TabIndex = 32;
-            fecha_de_IngresoLabel1.Text = "Fecha de Ingreso:";
+            fecha_de_IngresoLabel1.Text = "Ingreso:";
             // 
             // empleadosBL_EmpleadosBindingNavigator
             // 
             this.empleadosBL_EmpleadosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.empleadosBL_EmpleadosBindingNavigator.BackColor = System.Drawing.Color.Transparent;
             this.empleadosBL_EmpleadosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.empleadosBL_EmpleadosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.empleadosBL_EmpleadosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -180,7 +197,7 @@
             this.empleadosBL_EmpleadosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.empleadosBL_EmpleadosBindingNavigator.Name = "empleadosBL_EmpleadosBindingNavigator";
             this.empleadosBL_EmpleadosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.empleadosBL_EmpleadosBindingNavigator.Size = new System.Drawing.Size(722, 25);
+            this.empleadosBL_EmpleadosBindingNavigator.Size = new System.Drawing.Size(734, 25);
             this.empleadosBL_EmpleadosBindingNavigator.TabIndex = 0;
             this.empleadosBL_EmpleadosBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -279,148 +296,157 @@
             this.empleadosBL_EmpleadosBindingNavigatorSaveItem.Text = "Guardar datos";
             this.empleadosBL_EmpleadosBindingNavigatorSaveItem.Click += new System.EventHandler(this.empleadosBL_EmpleadosBindingNavigatorSaveItem_Click);
             // 
+            // activoCheckBox
+            // 
+            this.activoCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.activoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.activoCheckBox.Location = new System.Drawing.Point(519, 319);
+            this.activoCheckBox.Name = "activoCheckBox";
+            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
+            this.activoCheckBox.TabIndex = 18;
+            this.activoCheckBox.UseVisualStyleBackColor = false;
+            // 
+            // apellidoTextBox
+            // 
+            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Apellido", true));
+            this.apellidoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apellidoTextBox.Location = new System.Drawing.Point(516, 66);
+            this.apellidoTextBox.Name = "apellidoTextBox";
+            this.apellidoTextBox.Size = new System.Drawing.Size(200, 26);
+            this.apellidoTextBox.TabIndex = 20;
+            // 
+            // correoTextBox
+            // 
+            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Correo", true));
+            this.correoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.correoTextBox.Location = new System.Drawing.Point(516, 170);
+            this.correoTextBox.Name = "correoTextBox";
+            this.correoTextBox.Size = new System.Drawing.Size(199, 26);
+            this.correoTextBox.TabIndex = 22;
+            // 
+            // direccionTextBox
+            // 
+            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Direccion", true));
+            this.direccionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.direccionTextBox.Location = new System.Drawing.Point(519, 209);
+            this.direccionTextBox.Name = "direccionTextBox";
+            this.direccionTextBox.Size = new System.Drawing.Size(194, 26);
+            this.direccionTextBox.TabIndex = 24;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.idTextBox.Location = new System.Drawing.Point(65, 63);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.ReadOnly = true;
+            this.idTextBox.Size = new System.Drawing.Size(104, 26);
+            this.idTextBox.TabIndex = 28;
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Nombre", true));
+            this.nombreTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nombreTextBox.Location = new System.Drawing.Point(251, 64);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(176, 26);
+            this.nombreTextBox.TabIndex = 30;
+            // 
+            // telefonoTextBox
+            // 
+            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Telefono", true));
+            this.telefonoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefonoTextBox.Location = new System.Drawing.Point(516, 124);
+            this.telefonoTextBox.Name = "telefonoTextBox";
+            this.telefonoTextBox.Size = new System.Drawing.Size(203, 26);
+            this.telefonoTextBox.TabIndex = 32;
+            // 
+            // fecha_de_IngresoDateTimePicker
+            // 
+            this.fecha_de_IngresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Fecha_de_Ingreso", true));
+            this.fecha_de_IngresoDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fecha_de_IngresoDateTimePicker.Location = new System.Drawing.Point(519, 255);
+            this.fecha_de_IngresoDateTimePicker.Name = "fecha_de_IngresoDateTimePicker";
+            this.fecha_de_IngresoDateTimePicker.Size = new System.Drawing.Size(194, 26);
+            this.fecha_de_IngresoDateTimePicker.TabIndex = 33;
+            // 
             // listaEmpleadosBindingSource
             // 
-         //   this.listaEmpleadosBindingSource.DataSource = typeof(BL.Rentas.EmpleadosBL.Empleados);
+            this.listaEmpleadosBindingSource.DataSource = typeof(BL.Rentas.EmpleadosBL.Empleados);
             // 
             // listaEmpleadosDataGridView
             // 
             this.listaEmpleadosDataGridView.AutoGenerateColumns = false;
             this.listaEmpleadosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listaEmpleadosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewCheckBoxColumn1});
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewCheckBoxColumn2});
             this.listaEmpleadosDataGridView.DataSource = this.listaEmpleadosBindingSource;
-            this.listaEmpleadosDataGridView.Location = new System.Drawing.Point(330, 67);
+            this.listaEmpleadosDataGridView.Location = new System.Drawing.Point(3, 105);
             this.listaEmpleadosDataGridView.Name = "listaEmpleadosDataGridView";
-            this.listaEmpleadosDataGridView.Size = new System.Drawing.Size(366, 220);
-            this.listaEmpleadosDataGridView.TabIndex = 17;
+            this.listaEmpleadosDataGridView.Size = new System.Drawing.Size(427, 305);
+            this.listaEmpleadosDataGridView.TabIndex = 33;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Id";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Id";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Nombre";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // dataGridViewTextBoxColumn3
+            // dataGridViewTextBoxColumn10
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellido";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Apellido";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // dataGridViewTextBoxColumn4
+            // dataGridViewTextBoxColumn11
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Correo";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Correo";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Correo";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Correo";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // dataGridViewTextBoxColumn5
+            // dataGridViewTextBoxColumn12
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Direccion";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Direccion";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Direccion";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Direccion";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // dataGridViewTextBoxColumn6
+            // dataGridViewTextBoxColumn13
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Telefono";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Telefono";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // dataGridViewTextBoxColumn7
+            // dataGridViewTextBoxColumn14
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Fecha_de_Ingreso";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha_de_Ingreso";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Fecha_de_Ingreso";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Fecha_de_Ingreso";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // dataGridViewCheckBoxColumn1
+            // dataGridViewCheckBoxColumn2
             // 
-            this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-            this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-            // 
-            // activoCheckBox
-            // 
-            this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.listaEmpleadosBindingSource, "Activo", true));
-            this.activoCheckBox.Location = new System.Drawing.Point(128, 73);
-            this.activoCheckBox.Name = "activoCheckBox";
-            this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
-            this.activoCheckBox.TabIndex = 18;
-            this.activoCheckBox.Text = "checkBox1";
-            this.activoCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // apellidoTextBox
-            // 
-            this.apellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Apellido", true));
-            this.apellidoTextBox.Location = new System.Drawing.Point(128, 103);
-            this.apellidoTextBox.Name = "apellidoTextBox";
-            this.apellidoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.apellidoTextBox.TabIndex = 20;
-            // 
-            // correoTextBox
-            // 
-            this.correoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Correo", true));
-            this.correoTextBox.Location = new System.Drawing.Point(128, 129);
-            this.correoTextBox.Name = "correoTextBox";
-            this.correoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.correoTextBox.TabIndex = 22;
-            // 
-            // direccionTextBox
-            // 
-            this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Direccion", true));
-            this.direccionTextBox.Location = new System.Drawing.Point(128, 155);
-            this.direccionTextBox.Name = "direccionTextBox";
-            this.direccionTextBox.Size = new System.Drawing.Size(104, 20);
-            this.direccionTextBox.TabIndex = 24;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(128, 207);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(104, 20);
-            this.idTextBox.TabIndex = 28;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(128, 233);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(104, 20);
-            this.nombreTextBox.TabIndex = 30;
-            // 
-            // telefonoTextBox
-            // 
-            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaEmpleadosBindingSource, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(128, 259);
-            this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(104, 20);
-            this.telefonoTextBox.TabIndex = 32;
-            // 
-            // fecha_de_IngresoDateTimePicker
-            // 
-            this.fecha_de_IngresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaEmpleadosBindingSource, "Fecha_de_Ingreso", true));
-            this.fecha_de_IngresoDateTimePicker.Location = new System.Drawing.Point(128, 184);
-            this.fecha_de_IngresoDateTimePicker.Name = "fecha_de_IngresoDateTimePicker";
-            this.fecha_de_IngresoDateTimePicker.Size = new System.Drawing.Size(200, 20);
-            this.fecha_de_IngresoDateTimePicker.TabIndex = 33;
+            this.dataGridViewCheckBoxColumn2.DataPropertyName = "Activo";
+            this.dataGridViewCheckBoxColumn2.HeaderText = "Activo";
+            this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
             // 
             // Form7Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(722, 410);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(734, 422);
+            this.Controls.Add(this.listaEmpleadosDataGridView);
             this.Controls.Add(fecha_de_IngresoLabel1);
             this.Controls.Add(this.fecha_de_IngresoDateTimePicker);
             this.Controls.Add(activoLabel);
@@ -437,10 +463,10 @@
             this.Controls.Add(this.nombreTextBox);
             this.Controls.Add(telefonoLabel);
             this.Controls.Add(this.telefonoTextBox);
-            this.Controls.Add(this.listaEmpleadosDataGridView);
             this.Controls.Add(this.empleadosBL_EmpleadosBindingNavigator);
             this.Name = "Form7Empleados";
-            this.Text = "Form7Empleados";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Empleados";
             this.Load += new System.EventHandler(this.Form7Empleados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.empleadosBL_EmpleadosBindingNavigator)).EndInit();
             this.empleadosBL_EmpleadosBindingNavigator.ResumeLayout(false);
@@ -466,8 +492,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton empleadosBL_EmpleadosBindingNavigatorSaveItem;
-        private System.Windows.Forms.BindingSource listaEmpleadosBindingSource;
-        private System.Windows.Forms.DataGridView listaEmpleadosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -484,5 +508,15 @@
         private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.TextBox telefonoTextBox;
         private System.Windows.Forms.DateTimePicker fecha_de_IngresoDateTimePicker;
+        private System.Windows.Forms.BindingSource listaEmpleadosBindingSource;
+        private System.Windows.Forms.DataGridView listaEmpleadosDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn2;
     }
 }

@@ -62,11 +62,11 @@
             this.clienteTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.servicioTextBox = new System.Windows.Forms.TextBox();
-            this.fecha_CitaDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.estatusComboBox = new System.Windows.Forms.ComboBox();
             this.empleadoComboBox = new System.Windows.Forms.ComboBox();
             this.listaEmpleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.horaComboBox = new System.Windows.Forms.ComboBox();
+            this.fecha_CitaTextBox = new System.Windows.Forms.TextBox();
             clienteLabel = new System.Windows.Forms.Label();
             empleadoLabel = new System.Windows.Forms.Label();
             horaLabel = new System.Windows.Forms.Label();
@@ -371,14 +371,6 @@
             this.servicioTextBox.Size = new System.Drawing.Size(141, 20);
             this.servicioTextBox.TabIndex = 28;
             // 
-            // fecha_CitaDateTimePicker
-            // 
-            this.fecha_CitaDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.listaCitasBindingSource, "Fecha_Cita", true));
-            this.fecha_CitaDateTimePicker.Location = new System.Drawing.Point(64, 327);
-            this.fecha_CitaDateTimePicker.Name = "fecha_CitaDateTimePicker";
-            this.fecha_CitaDateTimePicker.Size = new System.Drawing.Size(142, 20);
-            this.fecha_CitaDateTimePicker.TabIndex = 31;
-            // 
             // estatusComboBox
             // 
             this.estatusComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Estatus", true));
@@ -426,6 +418,14 @@
             this.horaComboBox.Size = new System.Drawing.Size(139, 21);
             this.horaComboBox.TabIndex = 34;
             // 
+            // fecha_CitaTextBox
+            // 
+            this.fecha_CitaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.listaCitasBindingSource, "Fecha_Cita", true));
+            this.fecha_CitaTextBox.Location = new System.Drawing.Point(68, 331);
+            this.fecha_CitaTextBox.Name = "fecha_CitaTextBox";
+            this.fecha_CitaTextBox.Size = new System.Drawing.Size(136, 20);
+            this.fecha_CitaTextBox.TabIndex = 35;
+            // 
             // Form6Citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -433,12 +433,12 @@
             this.AutoScroll = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(916, 503);
+            this.Controls.Add(this.fecha_CitaTextBox);
             this.Controls.Add(this.horaComboBox);
             this.Controls.Add(this.empleadoComboBox);
             this.Controls.Add(estatusLabel1);
             this.Controls.Add(this.estatusComboBox);
             this.Controls.Add(fecha_CitaLabel);
-            this.Controls.Add(this.fecha_CitaDateTimePicker);
             this.Controls.Add(clienteLabel);
             this.Controls.Add(this.clienteTextBox);
             this.Controls.Add(empleadoLabel);
@@ -492,10 +492,10 @@
         private System.Windows.Forms.TextBox clienteTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox servicioTextBox;
-        private System.Windows.Forms.DateTimePicker fecha_CitaDateTimePicker;
         private System.Windows.Forms.ComboBox estatusComboBox;
         private System.Windows.Forms.ComboBox empleadoComboBox;
         private System.Windows.Forms.BindingSource listaEmpleadosBindingSource;
         private System.Windows.Forms.ComboBox horaComboBox;
+        private System.Windows.Forms.TextBox fecha_CitaTextBox;
     }
 }
